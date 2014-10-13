@@ -10,7 +10,7 @@
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
 
-@interface EditTableViewController () <ABPeoplePickerNavigationControllerDelegate, ABPersonViewControllerDelegate>
+@interface EditTableViewController () <ABPeoplePickerNavigationControllerDelegate>
 
 @property (nonatomic, strong) ABPeoplePickerNavigationController *addressBookController;
 
@@ -76,7 +76,7 @@
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
 
 
@@ -89,152 +89,94 @@
 }
 
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person {
-   /* NSString *firstname = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonFirstNameProperty));
-    NSString *lastname = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonLastNameProperty));
     
-    NSString *tempnumber;
-    ABMultiValueRef phonesRef = ABRecordCopyValue(person, kABPersonPhoneProperty);
-    for (int i=0; i<ABMultiValueGetCount(phonesRef); i++) {
-        CFStringRef currentPhoneLabel = ABMultiValueCopyLabelAtIndex(phonesRef, i);
-        CFStringRef currentPhoneValue = ABMultiValueCopyValueAtIndex(phonesRef, i);
-        if (CFStringCompare(currentPhoneLabel, kABHomeLabel, 0) == kCFCompareEqualTo) {
-            tempnumber = (__bridge NSString *)currentPhoneValue;
-        }
-        if (CFStringCompare(currentPhoneLabel, kABWorkLabel, 0) == kCFCompareEqualTo) {
-            tempnumber = (__bridge NSString *)currentPhoneValue;
-        }
-        if (CFStringCompare(currentPhoneLabel, kABPersonPhoneIPhoneLabel, 0) == kCFCompareEqualTo) {
-            tempnumber = (__bridge NSString *)currentPhoneValue;
-        }
-        if (CFStringCompare(currentPhoneLabel, kABPersonPhoneMobileLabel, 0) == kCFCompareEqualTo) {
-            tempnumber = (__bridge NSString *)currentPhoneValue;
-        }
-        if (CFStringCompare(currentPhoneLabel, kABPersonPhoneMainLabel, 0) == kCFCompareEqualTo) {
-            tempnumber = (__bridge NSString *)currentPhoneValue;
-        }
-        if (CFStringCompare(currentPhoneLabel, kABOtherLabel , 0) == kCFCompareEqualTo) {
-            tempnumber = (__bridge NSString *)currentPhoneValue;
-        }
-        CFRelease(currentPhoneLabel);
-        CFRelease(currentPhoneValue);
-        if(tempnumber)
-            break;
-    }
-    CFRelease(phonesRef);
-    NSString *fullNameString =[NSString stringWithFormat:@"%@ %@",firstname ? firstname : @"",lastname ? lastname : @""];
-    if(![self.myMessages.recipientsNumbers containsObject:tempnumber])
-    {
-        [self.myMessages AddContactWithName:fullNameString AndNumber:tempnumber];
-    }
-    else
-    {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Phone already exsist"
-                                                       message: [NSString stringWithFormat:@"You alrady add %@.",fullNameString]
-                                                      delegate: self
-                                             cancelButtonTitle:@"Cancel"
-                                             otherButtonTitles:@"OK",nil];
-        [alert show];
-    }
-    [self.tableView reloadData];
+    [self SeletPerson:person];
     
-    [_addressBookController dismissViewControllerAnimated:YES completion:nil];*/
-    ABPersonViewController *controller = [[ABPersonViewController alloc] init];
-    controller.displayedPerson = person;
-    controller.displayedProperties = [NSArray arrayWithObject:[NSNumber numberWithInt:kABPersonPhoneProperty]];
-    controller.personViewDelegate = self;
-    [peoplePicker pushViewController:controller animated:YES];
-    return NO;
+    return YES;
     
 }
 
-- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker didSelectPerson:(ABRecordRef)person{
-    /*NSString *firstname = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonFirstNameProperty));
-    NSString *lastname = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonLastNameProperty));
-    
-    NSString *tempnumber;
-    ABMultiValueRef phonesRef = ABRecordCopyValue(person, kABPersonPhoneProperty);
-    for (int i=0; i<ABMultiValueGetCount(phonesRef); i++) {
-        CFStringRef currentPhoneLabel = ABMultiValueCopyLabelAtIndex(phonesRef, i);
-        CFStringRef currentPhoneValue = ABMultiValueCopyValueAtIndex(phonesRef, i);
-        if (CFStringCompare(currentPhoneLabel, kABHomeLabel, 0) == kCFCompareEqualTo) {
-            tempnumber = (__bridge NSString *)currentPhoneValue;
-        }
-        if (CFStringCompare(currentPhoneLabel, kABWorkLabel, 0) == kCFCompareEqualTo) {
-            tempnumber = (__bridge NSString *)currentPhoneValue;
-        }
-        if (CFStringCompare(currentPhoneLabel, kABPersonPhoneIPhoneLabel, 0) == kCFCompareEqualTo) {
-            tempnumber = (__bridge NSString *)currentPhoneValue;
-        }
-        if (CFStringCompare(currentPhoneLabel, kABPersonPhoneMobileLabel, 0) == kCFCompareEqualTo) {
-            tempnumber = (__bridge NSString *)currentPhoneValue;
-        }
-        if (CFStringCompare(currentPhoneLabel, kABPersonPhoneMainLabel, 0) == kCFCompareEqualTo) {
-            tempnumber = (__bridge NSString *)currentPhoneValue;
-        }
-        if (CFStringCompare(currentPhoneLabel, kABOtherLabel , 0) == kCFCompareEqualTo) {
-            tempnumber = (__bridge NSString *)currentPhoneValue;
-        }
-        CFRelease(currentPhoneLabel);
-        CFRelease(currentPhoneValue);
-        if(tempnumber)
-            break;
-    }
-    if(phonesRef)
-    {
-        CFRelease(phonesRef);
-    }
-    else{
-        tempnumber = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonEmailProperty));
-        
-    }
-    NSString *fullNameString =[NSString stringWithFormat:@"%@ %@",firstname ? firstname : @"",lastname ? lastname : @""];
-    if(![self.myMessages.recipientsNumbers containsObject:tempnumber])
-    {
-        
-        [self.myMessages AddContactWithName:fullNameString AndNumber:tempnumber];
-    }
-    else
-    {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Phone already exsist"
-                                                       message: [NSString stringWithFormat:@"You alrady add %@.",fullNameString]
-                                                      delegate: self
-                                             cancelButtonTitle:@"Cancel"
-                                             otherButtonTitles:@"OK",nil];
-        [alert show];
-    }
-    
-    [self.tableView reloadData];
-    */
-    ABPersonViewController *controller = [[ABPersonViewController alloc] init];
-    controller.displayedPerson = person;
-    controller.displayedProperties = [NSArray arrayWithObject:[NSNumber numberWithInt:kABPersonPhoneProperty]];
-    controller.personViewDelegate = self;
-    [peoplePicker pushViewController:controller animated:YES];
-
-    
-}
 
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker
       shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property
                               identifier:(ABMultiValueIdentifier)identifier {
-    return NO;
+    return YES;
 }
 
--(BOOL)personViewController:(ABPersonViewController *)personViewController shouldPerformDefaultActionForPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier
-{
-    //ABMutableMultiValueRef multi = ABRecordCopyValue(person, property);
-    NSString *firstname = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonFirstNameProperty));
-    NSString *lastname = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonLastNameProperty));
-    //CFStringRef phone = ABMultiValueCopyValueAtIndex(multi, identifierForValue);
-    //CFRelease(phone);
-    
-    ABPeoplePickerNavigationController *peoplePicker = (ABPeoplePickerNavigationController *)personViewController.navigationController;
-    //[peoplePicker dismissModalViewControllerAnimated:YES];
-    return NO;
+//IOS 8 method
+- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker didSelectPerson:(ABRecordRef)person{
+    [self SeletPerson:person];
 }
 
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker {
     [_addressBookController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)SeletPerson:(ABRecordRef)person
+{
+    NSString *firstname = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonFirstNameProperty));
+    NSString *lastname = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonLastNameProperty));
+    
+    NSString *fullNameString =[NSString stringWithFormat:@"%@ %@",firstname ? firstname : @"",lastname ? lastname : @""];
+    
+    NSMutableArray *tempnumber = [[NSMutableArray alloc]init];
+    ABMultiValueRef phonesRef = ABRecordCopyValue(person, kABPersonPhoneProperty);
+    
+    for (int i=0; i<ABMultiValueGetCount(phonesRef); i++) {
+        CFStringRef currentPhoneLabel = ABMultiValueCopyLabelAtIndex(phonesRef, i);
+        CFStringRef currentPhoneValue = ABMultiValueCopyValueAtIndex(phonesRef, i);
+        if (CFStringCompare(currentPhoneLabel, kABHomeLabel, 0) == kCFCompareEqualTo) {
+            [tempnumber addObject:(__bridge NSString*)currentPhoneValue];
+        }
+        else if (CFStringCompare(currentPhoneLabel, kABWorkLabel, 0) == kCFCompareEqualTo) {
+            [tempnumber addObject:(__bridge NSString*)currentPhoneValue];
+        }
+        else if (CFStringCompare(currentPhoneLabel, kABPersonPhoneIPhoneLabel, 0) == kCFCompareEqualTo) {
+            [tempnumber addObject:(__bridge NSString*)currentPhoneValue];
+        }
+        else if (CFStringCompare(currentPhoneLabel, kABPersonPhoneMobileLabel, 0) == kCFCompareEqualTo) {
+            [tempnumber addObject:(__bridge NSString*)currentPhoneValue];
+        }
+        else if (CFStringCompare(currentPhoneLabel, kABPersonPhoneMainLabel, 0) == kCFCompareEqualTo) {
+            [tempnumber addObject:(__bridge NSString*)currentPhoneValue];
+        }
+        if (CFStringCompare(currentPhoneLabel, kABOtherLabel , 0) == kCFCompareEqualTo) {
+            [tempnumber addObject:(__bridge NSString*)currentPhoneValue];
+        }
+        CFRelease(currentPhoneLabel);
+        CFRelease(currentPhoneValue);
+    }
+    
+    CFRelease(phonesRef);
+    
+    if([tempnumber count] >1)
+    {
+        for (int i = 0; i<[tempnumber count]; i++) {
+            if(![self.myMessages.recipientsNumbers containsObject:tempnumber[i]])
+            {
+                NSString *number = tempnumber[i];
+                
+            }
+        }
+    }
+    else
+    {
+        [self.myMessages AddContactWithName:fullNameString AndNumber:tempnumber[0]];
+    }
+    
+    
+    
+   
+    /*else
+    {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Phone already exsist"
+                                                       message: [NSString stringWithFormat:@"You alrady add %@.",fullNameString]
+                                                      delegate: self
+                                             cancelButtonTitle:@"Cancel"
+                                             otherButtonTitles:@"OK",nil];
+        [alert show];
+    }*/
+    [self.tableView reloadData];
 }
 
 @end

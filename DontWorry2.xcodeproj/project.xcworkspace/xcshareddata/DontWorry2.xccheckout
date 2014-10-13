@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>70D6D040-7688-4380-9686-07810AA7B08C</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1A539848901E23C37973B86A12633DC9B64B2566</key>
+		<string>https://github.com/liroyma/DontWorry.git</string>
+	</dict>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1A539848901E23C37973B86A12633DC9B64B2566</key>
+		<string>DontWorry2.1/</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/liroyma/DontWorry.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1A539848901E23C37973B86A12633DC9B64B2566</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1A539848901E23C37973B86A12633DC9B64B2566</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DontWorry2.1</string>
+		</dict>
+	</array>
+</dict>
+</plist>

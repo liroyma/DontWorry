@@ -86,7 +86,7 @@
     [self saveData];
 }
 
--(void)AddContactWithName:(NSString *)name AndNumber:(NSString *)number
+-(void)AddContactWithName:(NSString *)name AndNumber:(NSString*)number;
 {
     [self.recipientsNames addObject:name];
     [self.recipientsNumbers addObject:number];
