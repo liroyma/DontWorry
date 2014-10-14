@@ -79,6 +79,30 @@
     return self;
 }
 
+-(UIImage*)ResizeImageToSize:(CGSize)size
+{
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
+    [self.image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
+-(UIImage*)SetEmptyImage
+{
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:105.0f/255 green:202.0f/255 blue:249.0f/255 alpha:1] CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 
 -(NSString *)addLocationMessage
 {

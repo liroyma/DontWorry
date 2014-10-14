@@ -47,4 +47,8 @@
 
 -(void)resetMessageCounter;
 
+-(UIImage*)ResizeImageToSize:(CGSize)size;
+
+-(UIImage*)SetEmptyImage;
+
 @end

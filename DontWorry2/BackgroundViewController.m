@@ -85,7 +85,7 @@
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    [self.myMessages setImagebackground:newImage];
+    [self.myMessages setImagebackground:chosenImage];
     
     
     [picker dismissViewControllerAnimated:YES completion:NULL];

@@ -34,11 +34,11 @@
     [self.myMessages loadData];
     if(self.myMessages.image)
     {
-        self.collectionView.backgroundColor =[UIColor colorWithPatternImage:self.myMessages.image];
+        self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[self.myMessages ResizeImageToSize:self.collectionView.bounds.size]];
     }
     else
     {
-        self.collectionView.backgroundColor = [UIColor colorWithRed:105.0f/255 green:202.0f/255 blue:249.0f/255 alpha:1];
+        self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[self.myMessages SetEmptyImage]];
     }
     self.names.text = [self.myMessages.recipientsNames componentsJoinedByString:@", "];
     [self.collectionView reloadData];
