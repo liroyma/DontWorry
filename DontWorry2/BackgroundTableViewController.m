@@ -8,7 +8,7 @@
 
 #import "BackgroundTableViewController.h"
 
-@interface BackgroundTableViewController ()
+@interface BackgroundTableViewController () 
 
 @end
 
@@ -29,7 +29,53 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)reset:(id)sender {
-    [self.myMessages setImagebackground:nil];
+    if([UIAlertController class])
+    {
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle:@"איפוס תמונת רקע"
+                                      message:@"האם אתה בטוח שאתה רוצה לאפס הרקע?"
+                                      preferredStyle:UIAlertControllerStyleAlert];
+
+        UIAlertAction* ok = [UIAlertAction
+                             actionWithTitle:@"אפס"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [self.myMessages setImagebackground:nil];
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                                 
+                             }];
+        UIAlertAction* cancel = [UIAlertAction
+                                 actionWithTitle:@"ביטול"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action)
+                                 {
+                                     [alert dismissViewControllerAnimated:YES completion:nil];
+                                     
+                                 }];
+
+        [alert addAction:ok];
+        [alert addAction:cancel];
+
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"איפוס תמונת רקע"
+                                                        message:@"האם אתה בטוח שאתה רוצה לאפס הרקע?"
+                                                        delegate:self
+                                               cancelButtonTitle:@"ביטול"
+                                               otherButtonTitles:@"אפס", nil];
+        [alert show];
+    }
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex==1)
+    {
+        [self.myMessages setImagebackground:nil];
+    }
 }
 
 - (IBAction)open {

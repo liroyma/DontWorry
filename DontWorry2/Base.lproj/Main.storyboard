@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GEg-6h-bhm">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -298,7 +297,7 @@
             </objects>
             <point key="canvasLocation" x="820" y="-425"/>
         </scene>
-        <!--ראשי-->
+        <!--Collection View Controller-->
         <scene sceneID="K3Z-Rd-XP1">
             <objects>
                 <viewController id="53w-dr-9Qi" customClass="CollectionViewController" sceneMemberID="viewController">
@@ -364,7 +363,7 @@
                             <constraint firstItem="29i-lU-TWo" firstAttribute="top" secondItem="17P-Jp-3aK" secondAttribute="bottom" constant="8" id="zhm-a6-EEd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ראשי" image="tabBarBubble" selectedImage="tabBarBubble" id="4Ts-QK-Lao"/>
+                    <tabBarItem key="tabBarItem" selectedImage="tabBarBubble" systemItem="mostViewed" id="4Ts-QK-Lao"/>
                     <navigationItem key="navigationItem" id="nx8-lb-zji">
                         <barButtonItem key="backBarButtonItem" title=" שמור" id="vva-ev-14P"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Hll-az-opb"/>
@@ -479,7 +478,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GEg-6h-bhm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="9hl-O3-5XZ">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -518,13 +517,16 @@
         <scene sceneID="Hsf-aE-CVZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FBO-yW-hBe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="עריכת כפתורים" image="tabBarEditBubble" selectedImage="tabBarEditBubble" id="spN-lk-ac4"/>
+                    <tabBarItem key="tabBarItem" title="עריכת כפתורים" image="tabBarEditBubble" id="spN-lk-ac4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W9h-NL-eTm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="uwc-65-paT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="FlD-nN-ii3" kind="relationship" relationship="rootViewController" id="gAL-R8-iK2"/>
                     </connections>

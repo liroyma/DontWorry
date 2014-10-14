@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Messages.h"
 
-@interface BackgroundTableViewController : UITableViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface BackgroundTableViewController : UITableViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) Messages *myMessages;
 

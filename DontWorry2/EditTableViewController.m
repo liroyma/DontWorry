@@ -151,13 +151,13 @@
     
     if([tempnumber count] >1)
     {
-        for (int i = 0; i<[tempnumber count]; i++) {
+        /*for (int i = 0; i<[tempnumber count]; i++) {
             if(![self.myMessages.recipientsNumbers containsObject:tempnumber[i]])
             {
                 NSString *number = tempnumber[i];
                 
             }
-        }
+        }*/
     }
     else
     {
