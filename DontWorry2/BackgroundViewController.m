@@ -29,7 +29,7 @@
     {
         UIAlertController * alert=   [UIAlertController
                                       alertControllerWithTitle:@"איפוס תמונת רקע"
-                                      message:@"האם אתה בטוח שאתה רוצה לאפס הרקע?"
+                                      message:@"האם ברצונך לאפס הגדרות רקע?"
                                       preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction
@@ -58,7 +58,7 @@
     else
     {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"איפוס תמונת רקע"
-                                                        message:@"האם אתה בטוח שאתה רוצה לאפס הרקע?"
+                                                       message:@"האם ברצונך לאפס הגדרות רקע?"
                                                        delegate:self
                                               cancelButtonTitle:@"ביטול"
                                               otherButtonTitles:@"אפס", nil];

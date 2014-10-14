@@ -121,9 +121,8 @@
     [self.messages addObject:message];
     [self.defualt setObject:self.messages forKey:@"messages"];
     [self.defualt synchronize];
-
-
 }
+
 
 -(void)RemoveMessage:(NSString *)message
 {

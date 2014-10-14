@@ -10,6 +10,7 @@
 #import "AddMessageViewController.h"
 
 @interface ButtonsTableViewController () <UIPopoverControllerDelegate>
+@property (nonatomic) NSInteger index;
 
 @end
 
@@ -34,28 +35,56 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {    return 1;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {    return self.myMessages.messages.count;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.myMessages.messages.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell" forIndexPath:indexPath];
     cell.textLabel.text = self.myMessages.messages[[indexPath row] ];
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didlong:)];
+    [cell.contentView addGestureRecognizer:gesture];
     return cell;
+}
+
+
+-(void)didlong:(UIGestureRecognizer *)gestureRecognizer {
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        CGPoint swipeLocation = [gestureRecognizer locationInView:self.tableView];
+        NSIndexPath *swipedIndexPath = [self.tableView indexPathForRowAtPoint:swipeLocation];
+        self.index = swipedIndexPath.row;
+        UITableViewCell* swipedCell = [self.tableView cellForRowAtIndexPath:swipedIndexPath];
+        UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:@"עריכת הודעה" message:@"ערוך את ההודעה" delegate:self cancelButtonTitle:@"ביטול" otherButtonTitles: @"שמור",nil];
+        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        UITextField *nessgaeText = [alert textFieldAtIndex:0];
+        nessgaeText.text = swipedCell.textLabel.text;
+        nessgaeText.textAlignment = NSTextAlignmentRight;
+        [alert show];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {  //Login
+        UITextField *messgaeText = [alertView textFieldAtIndex:0];
+        [self.myMessages RemoveMessageAtIndex:self.index];
+        [self.myMessages AddMessage:messgaeText.text];
+        [self.tableView reloadData];
+    }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    //
     if ([segue.identifier isEqualToString:@"addMessage"]) {
         AddMessageViewController *destViewController = segue.destinationViewController;
         destViewController.myMessages = self.myMessages;
     }
 }
-
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
