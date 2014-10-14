@@ -9,8 +9,9 @@
 #import "SettingsViewController.h"
 #import "BackgroundViewController.h"
 #import <Social/Social.h>
+#import <MessageUI/MessageUI.h>
 
-@interface SettingsViewController() <UIActionSheetDelegate>
+@interface SettingsViewController() <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UISwitch *sendLocationSwitch;
 
@@ -55,6 +56,18 @@
     if([title isEqualToString:@"Mail"])
     {
         NSLog(@"Send Mail");
+        // Email Subject
+        NSString *emailTitle = @"Recommended App";
+        // Email Content
+        NSString *messageBody = @"<h1>I'm using DontWorry Application and it's great! :)</h1> <p>you should try it.</p>";
+        
+        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+        mc.mailComposeDelegate = self;
+        [mc setSubject:emailTitle];
+        [mc setMessageBody:messageBody isHTML:YES];
+        
+        // Present mail view controller on screen
+        [self presentViewController:mc animated:YES completion:NULL];
     }
     else if([title isEqualToString:@"FaceBook"])
     {
@@ -79,6 +92,30 @@
             [self presentViewController:tweetSheet animated:YES completion:nil];
         }
     }
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

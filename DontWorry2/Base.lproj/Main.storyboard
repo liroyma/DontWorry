@@ -141,79 +141,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGr-HZ-beX">
-                                <rect key="frame" x="131" y="296" width="59" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQh-U9-cPA">
-                                <rect key="frame" x="240" y="398" width="64" height="30"/>
-                                <state key="normal" title="שלח ואפס ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVL-Ur-yYT">
+                                <rect key="frame" x="0.0" y="335" width="320" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="4XD-vC-j9g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="אתר תמיכה">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendAndRest:" destination="tfe-nV-aJh" eventType="touchUpInside" id="lQK-PH-0fu"/>
+                                    <action selector="linkToWeb:" destination="tfe-nV-aJh" eventType="touchUpInside" id="Hhj-Vo-Jig"/>
                                 </connections>
                             </button>
                             <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5w-pq-AJO">
                                 <rect key="frame" x="0.0" y="64" width="320" height="253"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tradeMark" translatesAutoresizingMaskIntoConstraints="NO" id="7G8-e2-8RD">
-                                        <rect key="frame" x="0.0" y="48" width="320" height="98"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="320" id="skH-Vv-VMS"/>
-                                        </constraints>
+                                        <rect key="frame" x="100" y="67" width="120" height="120"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DontWorry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DT4-A9-JIO">
-                                        <rect key="frame" x="113" y="154" width="94" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="גרסא: 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucb-wE-S8b">
-                                        <rect key="frame" x="134" y="183" width="53" height="16"/>
+                                        <rect key="frame" x="134" y="214" width="53" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DontWorry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DT4-A9-JIO">
+                                        <rect key="frame" x="113" y="189" width="94" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.086274509803921567" green="0.63921568627450975" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="DT4-A9-JIO" firstAttribute="top" secondItem="7G8-e2-8RD" secondAttribute="bottom" constant="8" id="786-3e-5K4"/>
-                                    <constraint firstItem="ucb-wE-S8b" firstAttribute="top" secondItem="DT4-A9-JIO" secondAttribute="bottom" constant="5" id="8F5-3x-oGd"/>
-                                    <constraint firstAttribute="centerY" secondItem="7G8-e2-8RD" secondAttribute="centerY" constant="29.5" id="c8i-fD-Tim"/>
-                                    <constraint firstItem="7G8-e2-8RD" firstAttribute="top" secondItem="W5w-pq-AJO" secondAttribute="top" constant="48" id="dXR-dU-cl2"/>
-                                    <constraint firstAttribute="centerX" secondItem="ucb-wE-S8b" secondAttribute="centerX" id="fh7-tB-ctS"/>
-                                    <constraint firstAttribute="centerX" secondItem="DT4-A9-JIO" secondAttribute="centerX" id="kSZ-0Q-zMx"/>
-                                    <constraint firstAttribute="centerX" secondItem="7G8-e2-8RD" secondAttribute="centerX" id="uBI-Ic-GUj"/>
+                                    <constraint firstAttribute="centerY" secondItem="7G8-e2-8RD" secondAttribute="centerY" id="7Nj-KF-rGr"/>
+                                    <constraint firstAttribute="centerX" secondItem="7G8-e2-8RD" secondAttribute="centerX" id="FAd-md-mil"/>
+                                    <constraint firstItem="DT4-A9-JIO" firstAttribute="centerX" secondItem="ucb-wE-S8b" secondAttribute="centerX" constant="-0.5" id="LrH-nC-PW7"/>
+                                    <constraint firstItem="7G8-e2-8RD" firstAttribute="centerX" secondItem="DT4-A9-JIO" secondAttribute="centerX" id="Q0x-KX-is5"/>
+                                    <constraint firstItem="ucb-wE-S8b" firstAttribute="top" secondItem="DT4-A9-JIO" secondAttribute="bottom" constant="1" id="xM0-AX-5Uk"/>
+                                    <constraint firstItem="DT4-A9-JIO" firstAttribute="top" secondItem="7G8-e2-8RD" secondAttribute="bottom" constant="2" id="ylc-kN-pNs"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="הודעות שנשלחו: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjH-R8-Oa4">
-                                <rect key="frame" x="-23" y="378" width="320" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlm-Qv-nut">
+                                <rect key="frame" x="0.0" y="378" width="320" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Ge0-3Z-9cv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="צור קשר">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ShowMail:" destination="tfe-nV-aJh" eventType="touchUpInside" id="os6-5b-y2h"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="W5w-pq-AJO" firstAttribute="top" secondItem="WJ9-Vl-1c4" secondAttribute="bottom" id="2b7-q4-dMh"/>
-                            <constraint firstItem="DjH-R8-Oa4" firstAttribute="trailing" secondItem="yQh-U9-cPA" secondAttribute="trailing" constant="-7" id="6AE-ck-U8M"/>
-                            <constraint firstItem="yQh-U9-cPA" firstAttribute="top" secondItem="DjH-R8-Oa4" secondAttribute="bottom" constant="3" id="AHu-OQ-d7M"/>
-                            <constraint firstItem="W5w-pq-AJO" firstAttribute="width" secondItem="Mxf-lm-QH6" secondAttribute="width" id="Sdt-fB-Yeh"/>
-                            <constraint firstAttribute="centerX" secondItem="W5w-pq-AJO" secondAttribute="centerX" id="VtJ-Yc-zYY"/>
-                            <constraint firstItem="yQh-U9-cPA" firstAttribute="trailing" secondItem="Mxf-lm-QH6" secondAttribute="trailingMargin" id="XJt-fZ-4Yn"/>
-                            <constraint firstItem="m6c-la-tHW" firstAttribute="top" secondItem="W5w-pq-AJO" secondAttribute="bottom" constant="119" id="YQ0-eG-X4O"/>
-                            <constraint firstItem="m6c-la-tHW" firstAttribute="top" secondItem="yQh-U9-cPA" secondAttribute="bottom" constant="8" id="Zvo-9H-pAm"/>
-                            <constraint firstItem="DjH-R8-Oa4" firstAttribute="width" secondItem="Mxf-lm-QH6" secondAttribute="width" id="aR5-tM-PgV"/>
-                            <constraint firstItem="W5w-pq-AJO" firstAttribute="leading" secondItem="Mxf-lm-QH6" secondAttribute="leadingMargin" constant="-16" id="rMq-7A-tAX"/>
+                            <constraint firstItem="PVL-Ur-yYT" firstAttribute="centerX" secondItem="Nlm-Qv-nut" secondAttribute="centerX" id="3nt-tS-F3Q"/>
+                            <constraint firstAttribute="centerX" secondItem="PVL-Ur-yYT" secondAttribute="centerX" id="90d-qS-hdb"/>
+                            <constraint firstItem="m6c-la-tHW" firstAttribute="top" secondItem="PVL-Ur-yYT" secondAttribute="bottom" constant="66" id="Chh-TC-Cnd"/>
+                            <constraint firstItem="PVL-Ur-yYT" firstAttribute="width" secondItem="Mxf-lm-QH6" secondAttribute="width" id="D1H-Pe-DoE"/>
+                            <constraint firstItem="W5w-pq-AJO" firstAttribute="width" secondItem="Mxf-lm-QH6" secondAttribute="width" id="MHc-3Q-FrZ"/>
+                            <constraint firstAttribute="width" secondItem="Nlm-Qv-nut" secondAttribute="width" id="Mqg-I5-Clt"/>
+                            <constraint firstItem="W5w-pq-AJO" firstAttribute="leading" secondItem="WJ9-Vl-1c4" secondAttribute="leading" id="S8T-iA-YzE"/>
+                            <constraint firstItem="Nlm-Qv-nut" firstAttribute="top" secondItem="PVL-Ur-yYT" secondAttribute="bottom" constant="8" id="Vof-Zd-fxX"/>
+                            <constraint firstItem="PVL-Ur-yYT" firstAttribute="top" secondItem="W5w-pq-AJO" secondAttribute="bottom" constant="18" id="bzE-xG-rg4"/>
+                            <constraint firstItem="W5w-pq-AJO" firstAttribute="trailing" secondItem="WJ9-Vl-1c4" secondAttribute="trailing" id="d0o-2p-5Jy"/>
+                            <constraint firstItem="W5w-pq-AJO" firstAttribute="leading" secondItem="Mxf-lm-QH6" secondAttribute="leadingMargin" constant="-16" id="xNX-Le-fSv"/>
+                            <constraint firstItem="W5w-pq-AJO" firstAttribute="top" secondItem="WJ9-Vl-1c4" secondAttribute="bottom" id="xfL-V2-s7W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="אודות" id="4Yb-YY-9k1"/>
-                    <connections>
-                        <outlet property="countlbl" destination="EGr-HZ-beX" id="wjK-Z7-1ik"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngN-Py-ahQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -388,7 +390,7 @@
                             <constraint firstItem="29i-lU-TWo" firstAttribute="top" secondItem="17P-Jp-3aK" secondAttribute="bottom" constant="8" id="zhm-a6-EEd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" selectedImage="tabBarBubble" systemItem="mostViewed" id="4Ts-QK-Lao"/>
+                    <tabBarItem key="tabBarItem" id="4Ts-QK-Lao"/>
                     <navigationItem key="navigationItem" id="nx8-lb-zji">
                         <barButtonItem key="backBarButtonItem" title=" שמור" id="vva-ev-14P"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Hll-az-opb"/>
@@ -503,7 +505,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GEg-6h-bhm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="9hl-O3-5XZ">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -519,11 +521,11 @@
             </objects>
             <point key="canvasLocation" x="-290" y="-852"/>
         </scene>
-        <!--אנשי קשר-->
+        <!--Navigation Controller-->
         <scene sceneID="LvQ-G5-QVS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OYr-us-HIP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="אנשי קשר" image="tabBarContacts" id="L9M-VZ-nv4"/>
+                    <tabBarItem key="tabBarItem" title="" id="L9M-VZ-nv4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZCJ-tN-ZpK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -538,11 +540,11 @@
             </objects>
             <point key="canvasLocation" x="414" y="-425"/>
         </scene>
-        <!--עריכת כפתורים-->
+        <!--Navigation Controller-->
         <scene sceneID="Hsf-aE-CVZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FBO-yW-hBe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="עריכת כפתורים" image="tabBarEditBubble" id="spN-lk-ac4"/>
+                    <tabBarItem key="tabBarItem" title="" id="spN-lk-ac4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W9h-NL-eTm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -560,11 +562,11 @@
             </objects>
             <point key="canvasLocation" x="242" y="-1584"/>
         </scene>
-        <!--הגדרות-->
+        <!--Navigation Controller-->
         <scene sceneID="Lvz-SA-F3g">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aJA-YK-71R" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="הגדרות" image="tabBarSettings" id="bwl-zf-2ss"/>
+                    <tabBarItem key="tabBarItem" title="" id="bwl-zf-2ss"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nMn-e8-zBL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -581,10 +583,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tabBarBubble" width="32" height="32"/>
-        <image name="tabBarContacts" width="32" height="32"/>
-        <image name="tabBarEditBubble" width="32" height="32"/>
-        <image name="tabBarSettings" width="32" height="32"/>
         <image name="tradeMark" width="120" height="120"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

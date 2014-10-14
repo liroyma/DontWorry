@@ -20,6 +20,7 @@
 		747F675619BA549B00E9728B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747F675519BA549B00E9728B /* iAd.framework */; };
 		747F675919BB94A100E9728B /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 747F675819BB94A100E9728B /* CollectionViewController.m */; };
 		74A6521819ED26C200E5C959 /* BackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A6521719ED26C200E5C959 /* BackgroundViewController.m */; };
+		74A6521A19ED334100E5C959 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A6521919ED334100E5C959 /* MessageUI.framework */; };
 		74D2B23219B20DF3008C9F93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D2B23119B20DF3008C9F93 /* main.m */; };
 		74D2B23519B20DF3008C9F93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D2B23419B20DF3008C9F93 /* AppDelegate.m */; };
 		74D2B23B19B20DF3008C9F93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D2B23919B20DF3008C9F93 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		747F675819BB94A100E9728B /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		74A6521619ED26C200E5C959 /* BackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundViewController.h; sourceTree = "<group>"; };
 		74A6521719ED26C200E5C959 /* BackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundViewController.m; sourceTree = "<group>"; };
+		74A6521919ED334100E5C959 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		74D2B22C19B20DF3008C9F93 /* DontWorry2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DontWorry2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D2B23019B20DF3008C9F93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74D2B23119B20DF3008C9F93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A6521A19ED334100E5C959 /* MessageUI.framework in Frameworks */,
 				747474FA19BCE6C100F3F6D1 /* Social.framework in Frameworks */,
 				747F675619BA549B00E9728B /* iAd.framework in Frameworks */,
 				747F675119BA279C00E9728B /* CoreLocation.framework in Frameworks */,
@@ -113,6 +116,7 @@
 		74D2B22319B20DF3008C9F93 = {
 			isa = PBXGroup;
 			children = (
+				74A6521919ED334100E5C959 /* MessageUI.framework */,
 				747474F919BCE6C100F3F6D1 /* Social.framework */,
 				747F675519BA549B00E9728B /* iAd.framework */,
 				747F675019BA279C00E9728B /* CoreLocation.framework */,

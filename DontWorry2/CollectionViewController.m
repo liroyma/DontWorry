@@ -72,9 +72,6 @@
 {
     UICollectionViewCell  *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MessageCell" forIndexPath:indexPath];
     UILabel *lbl = (UILabel*) [cell viewWithTag:101];
-    /*[cell.layer setBorderWidth:3.0f];
-    [cell.layer setBorderColor:[UIColor orangeColor].CGColor];
-    [cell.layer setCornerRadius:20.0f];*/
     UIImage *image = [UIImage imageNamed:@"BUBBLE"];
     cell.backgroundColor = [UIColor colorWithPatternImage:image];
 

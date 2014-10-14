@@ -16,7 +16,28 @@
             
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    tabBarController.selectedIndex = 0;
+    UIViewController *tab1 = [[tabBarController viewControllers] objectAtIndex:0];
+    [[tab1 tabBarItem] setTitle:@"ראשי"];
+    [[tab1 tabBarItem] setImage:[UIImage imageNamed:@"tabBarBubble"]];
+    [[tab1 tabBarItem] setSelectedImage:[UIImage imageNamed:@"tabBarBubble"]];
+    
+    UIViewController *tab2 = [[tabBarController viewControllers] objectAtIndex:1];
+    [[tab2 tabBarItem] setTitle:@"אנשי קשר"];
+    [[tab2 tabBarItem] setImage:[UIImage imageNamed:@"tabBarContacts"]];
+    [[tab2 tabBarItem] setSelectedImage:[UIImage imageNamed:@"tabBarContacts"]];
+    
+    UIViewController *tab3 = [[tabBarController viewControllers] objectAtIndex:2];
+    [[tab3 tabBarItem] setTitle:@"עריכת כפתורים"];
+    [[tab3 tabBarItem] setImage:[UIImage imageNamed:@"tabBarEditBubble"]];
+    [[tab3 tabBarItem] setSelectedImage:[UIImage imageNamed:@"tabBarEditBubble"]];
+    
+    UIViewController *tab4 = [[tabBarController viewControllers] objectAtIndex:3];
+    [[tab4 tabBarItem] setTitle:@"הגדרות"];
+    [[tab4 tabBarItem] setImage:[UIImage imageNamed:@"tabBarSettings"]];
+    [[tab4 tabBarItem] setSelectedImage:[UIImage imageNamed:@"tabBarSettings"]];
+    
     return YES;
 }
 
@@ -38,6 +59,8 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     tabBarController.selectedIndex = 0;
+    
+    
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
