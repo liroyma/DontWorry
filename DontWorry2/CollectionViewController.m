@@ -108,21 +108,12 @@
         }
         else{
             str = self.myMessages.messages[indexPath.row];
-        }/*
-        if(indexPath.row < num-1)
-        {
-            
-        }*/
+        }
         
         if(str)
         {
             [self showSMS:str withRecipients:self.myMessages.recipientsNumbers];
-        }/*
-        else
-        {
-            NSLog(@"sending location");
-            [self showSMS:text withRecipients:self.myMessages.recipientsNumbers];
-        }*/
+        }
     }
     else
     {

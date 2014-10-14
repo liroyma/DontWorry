@@ -12,8 +12,10 @@
 @interface Messages()
 
 @property (nonatomic) NSInteger messageCounter;
+@property (nonatomic,strong) NSUserDefaults *defualt;
 
 @end
+
 
 @implementation Messages{
     CLLocationManager *locationManager;
@@ -40,7 +42,9 @@
 -(void)addCounter
 {
     self.messageCounter++;
-    [self saveData];
+    
+    [self.defualt setInteger:self.messageCounter forKey:@"counter"];
+    [self.defualt synchronize];
 }
 
 -(NSInteger)getMessagecounter
@@ -61,7 +65,14 @@
     {
         self.locationMessageString = @"שלח מיקום";
         self.messageCounter = 0;
+        self.defualt = [NSUserDefaults standardUserDefaults];
         [self loadData];
+        if([self.messages count]==0)
+        {
+            self.messages = [NSMutableArray arrayWithObjects:@"הגעתי לבית הספר", @"הגעתי הביתה",@"יצאתי מהעבודה", nil];
+            [self.defualt setObject:self.messages forKey:@"messages"];
+            [self.defualt synchronize];
+        }
         locationManager = [[CLLocationManager alloc] init];
         locationManager.delegate = self;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -83,14 +94,15 @@
 -(void) setImagebackground:(UIImage *)image
 {
     self.image = image;
-    [self saveData];
+    [self.defualt setObject: UIImagePNGRepresentation(self.image) forKey:@"image"];
+    [self.defualt synchronize];
 }
 
 -(void)AddContactWithName:(NSString *)name AndNumber:(NSString*)number;
 {
     [self.recipientsNames addObject:name];
     [self.recipientsNumbers addObject:number];
-    [self saveData];
+    [self saveContacts];
 
 }
 
@@ -99,41 +111,48 @@
     NSInteger index = [self.recipientsNames indexOfObject:name];
     [self.recipientsNames removeObject:name];
     [self.recipientsNumbers removeObjectAtIndex:index];
-    [self saveData];
+    [self saveContacts];
 
 }
 -(void) RemoveContactAtIndex:(NSInteger) index
 {
     [self.recipientsNames removeObjectAtIndex:index];
     [self.recipientsNumbers removeObjectAtIndex:index];
-    [self saveData];
+    [self saveContacts];
 
 }
 
 -(void)AddMessage:(NSString *)message
 {
     [self.messages addObject:message];
-    [self saveData];
+    [self.defualt setObject:self.messages forKey:@"messages"];
+    [self.defualt synchronize];
+
 
 }
 
 -(void)RemoveMessage:(NSString *)message
 {
     [self.messages removeObject:message];
-    [self saveData];
-
+    [self.defualt setObject:self.messages forKey:@"messages"];
+    [self.defualt synchronize];
 }
 
 -(void)RemoveMessageAtIndex:(NSInteger)index
 {
     [self.messages removeObjectAtIndex:index];
-    [self saveData];
+    [self.defualt setObject:self.messages forKey:@"messages"];
+    [self.defualt synchronize];
 
 }
 
 -(void)ChangeLocationButtonStatus:(BOOL)status
 {
     self.showLocationBtn = status;
+    
+    [self.defualt setBool:self.showLocationBtn forKey:@"showLocationBtn"];
+    [self.defualt synchronize];
+
     if(status)
     {
         [locationManager startUpdatingLocation];
@@ -143,7 +162,6 @@
         self.location = nil;
         [locationManager stopUpdatingLocation];
     }
-    [self saveData];
 }
 
 -(void) StopLocationUpdate
@@ -153,26 +171,20 @@
 
 - (void)loadData
 {
-    NSUserDefaults *defualt = [NSUserDefaults standardUserDefaults];
-    self.messages = [[defualt valueForKey:@"messages"] mutableCopy];
-    self.recipientsNumbers = [[defualt valueForKey:@"recipientsNumbers"] mutableCopy];
-    self.recipientsNames = [[defualt valueForKey:@"recipientsNames"] mutableCopy];
-    self.showLocationBtn = [defualt boolForKey:@"showLocationBtn"];
-    self.messageCounter = [defualt integerForKey:@"counter"];
-    NSData* imageData = [defualt objectForKey:@"image"];
+    self.messages = [[self.defualt valueForKey:@"messages"] mutableCopy];
+    self.recipientsNumbers = [[self.defualt valueForKey:@"recipientsNumbers"] mutableCopy];
+    self.recipientsNames = [[self.defualt valueForKey:@"recipientsNames"] mutableCopy];
+    self.showLocationBtn = [self.defualt boolForKey:@"showLocationBtn"];
+    self.messageCounter = [self.defualt integerForKey:@"counter"];
+    NSData* imageData = [self.defualt objectForKey:@"image"];
     self.image = [UIImage imageWithData:imageData];
 }
 
-- (void)saveData
+- (void)saveContacts
 {
-    NSUserDefaults *defualt = [NSUserDefaults standardUserDefaults];
-    [defualt setObject:self.messages forKey:@"messages"];
-    [defualt setObject: UIImagePNGRepresentation(self.image) forKey:@"image"];
-    [defualt setObject:self.recipientsNames forKey:@"recipientsNames"];
-    [defualt setObject:self.recipientsNumbers forKey:@"recipientsNumbers"];
-    [defualt setBool:self.showLocationBtn forKey:@"showLocationBtn"];
-    [defualt setInteger:self.messageCounter forKey:@"counter"];
-    [defualt synchronize];
+    [self.defualt setObject:self.recipientsNames forKey:@"recipientsNames"];
+    [self.defualt setObject:self.recipientsNumbers forKey:@"recipientsNumbers"];
+    [self.defualt synchronize];
 }
 
 #pragma Location scope
