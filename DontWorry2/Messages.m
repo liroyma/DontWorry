@@ -67,12 +67,6 @@
         self.messageCounter = 0;
         self.defualt = [NSUserDefaults standardUserDefaults];
         [self loadData];
-        if([self.messages count]==0)
-        {
-            self.messages = [NSMutableArray arrayWithObjects:@"הגעתי לבית הספר", @"הגעתי הביתה",@"יצאתי מהעבודה", nil];
-            [self.defualt setObject:self.messages forKey:@"messages"];
-            [self.defualt synchronize];
-        }
         locationManager = [[CLLocationManager alloc] init];
         locationManager.delegate = self;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -172,6 +166,12 @@
 - (void)loadData
 {
     self.messages = [[self.defualt valueForKey:@"messages"] mutableCopy];
+    if([self.messages count]==0)
+    {
+        self.messages = [NSMutableArray arrayWithObjects:@"הגעתי לבית הספר", @"הגעתי הביתה",@"יצאתי מהעבודה", nil];
+        [self.defualt setObject:self.messages forKey:@"messages"];
+        [self.defualt synchronize];
+    }
     self.recipientsNumbers = [[self.defualt valueForKey:@"recipientsNumbers"] mutableCopy];
     self.recipientsNames = [[self.defualt valueForKey:@"recipientsNames"] mutableCopy];
     self.showLocationBtn = [self.defualt boolForKey:@"showLocationBtn"];
