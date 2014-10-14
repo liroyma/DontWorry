@@ -25,9 +25,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)DismissUI:(id)sender {
-    NSLog(@"Exit");
-    if (self.textlbl.text && self.textlbl.text.length > 0)
+- (IBAction)DismissUI:(id)sender {    if (self.textlbl.text && self.textlbl.text.length > 0)
     {
         [self.myMessages AddMessage:self.textlbl.text];
     }

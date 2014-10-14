@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		74041E0319E1C44B00DD06A5 /* EditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74041E0219E1C44B00DD06A5 /* EditTableViewController.m */; };
-		744EDE2119DC222500C6F005 /* BackgroundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 744EDE2019DC222500C6F005 /* BackgroundTableViewController.m */; };
 		744EDE2719DDCA4B00C6F005 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 744EDE2619DDCA4B00C6F005 /* AboutViewController.m */; };
 		744F143219B213D5002F79AC /* Messages.m in Sources */ = {isa = PBXBuildFile; fileRef = 744F143119B213D5002F79AC /* Messages.m */; };
 		744F144F19B23300002F79AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744F144E19B23300002F79AC /* UIKit.framework */; };
@@ -20,6 +19,7 @@
 		747F675119BA279C00E9728B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747F675019BA279C00E9728B /* CoreLocation.framework */; };
 		747F675619BA549B00E9728B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747F675519BA549B00E9728B /* iAd.framework */; };
 		747F675919BB94A100E9728B /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 747F675819BB94A100E9728B /* CollectionViewController.m */; };
+		74A6521819ED26C200E5C959 /* BackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A6521719ED26C200E5C959 /* BackgroundViewController.m */; };
 		74D2B23219B20DF3008C9F93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D2B23119B20DF3008C9F93 /* main.m */; };
 		74D2B23519B20DF3008C9F93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D2B23419B20DF3008C9F93 /* AppDelegate.m */; };
 		74D2B23B19B20DF3008C9F93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D2B23919B20DF3008C9F93 /* Main.storyboard */; };
@@ -40,8 +40,6 @@
 /* Begin PBXFileReference section */
 		74041E0119E1C44B00DD06A5 /* EditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTableViewController.h; sourceTree = "<group>"; };
 		74041E0219E1C44B00DD06A5 /* EditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTableViewController.m; sourceTree = "<group>"; };
-		744EDE1F19DC222500C6F005 /* BackgroundTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundTableViewController.h; sourceTree = "<group>"; };
-		744EDE2019DC222500C6F005 /* BackgroundTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundTableViewController.m; sourceTree = "<group>"; };
 		744EDE2519DDCA4B00C6F005 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		744EDE2619DDCA4B00C6F005 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		744F143019B213D5002F79AC /* Messages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messages.h; sourceTree = "<group>"; };
@@ -59,6 +57,8 @@
 		747F675519BA549B00E9728B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		747F675719BB94A100E9728B /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		747F675819BB94A100E9728B /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		74A6521619ED26C200E5C959 /* BackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundViewController.h; sourceTree = "<group>"; };
+		74A6521719ED26C200E5C959 /* BackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundViewController.m; sourceTree = "<group>"; };
 		74D2B22C19B20DF3008C9F93 /* DontWorry2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DontWorry2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D2B23019B20DF3008C9F93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74D2B23119B20DF3008C9F93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -140,6 +140,8 @@
 				744F143919B217C5002F79AC /* Model */,
 				74D2B23C19B20DF3008C9F93 /* Images.xcassets */,
 				74D2B23919B20DF3008C9F93 /* Main.storyboard */,
+				74A6521619ED26C200E5C959 /* BackgroundViewController.h */,
+				74A6521719ED26C200E5C959 /* BackgroundViewController.m */,
 				744EDE2519DDCA4B00C6F005 /* AboutViewController.h */,
 				744EDE2619DDCA4B00C6F005 /* AboutViewController.m */,
 				747F675719BB94A100E9728B /* CollectionViewController.h */,
@@ -152,8 +154,6 @@
 				74041E0219E1C44B00DD06A5 /* EditTableViewController.m */,
 				747F674519B8DC4A00E9728B /* AddMessageViewController.h */,
 				747F674619B8DC4A00E9728B /* AddMessageViewController.m */,
-				744EDE1F19DC222500C6F005 /* BackgroundTableViewController.h */,
-				744EDE2019DC222500C6F005 /* BackgroundTableViewController.m */,
 				74D2B22F19B20DF3008C9F93 /* Supporting Files */,
 			);
 			path = DontWorry2;
@@ -287,9 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				744EDE2119DC222500C6F005 /* BackgroundTableViewController.m in Sources */,
 				744F143219B213D5002F79AC /* Messages.m in Sources */,
 				74D2B23519B20DF3008C9F93 /* AppDelegate.m in Sources */,
+				74A6521819ED26C200E5C959 /* BackgroundViewController.m in Sources */,
 				744F145419B2360C002F79AC /* SettingsViewController.m in Sources */,
 				74D2B23219B20DF3008C9F93 /* main.m in Sources */,
 				747F674719B8DC4A00E9728B /* AddMessageViewController.m in Sources */,

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GEg-6h-bhm">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -77,7 +78,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ckH-si-x1R" kind="push" identifier="background" id="5pk-xZ-L2B"/>
+                                            <segue destination="8rB-17-PwK" kind="push" identifier="background" id="koh-vy-jlh"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -128,71 +129,6 @@
             </objects>
             <point key="canvasLocation" x="774" y="153"/>
         </scene>
-        <!--Background Table View Controller-->
-        <scene sceneID="5rN-1B-IwN">
-            <objects>
-                <tableViewController id="ckH-si-x1R" customClass="BackgroundTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="jQk-6p-Gqj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection id="naP-eY-eYX">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="z4b-hS-Jy4">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottomLeft" tableViewCell="z4b-hS-Jy4" id="qA6-IX-htW">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsn-KL-lnu">
-                                                    <rect key="frame" x="8" y="5" width="306" height="41"/>
-                                                    <state key="normal" title="תמונות">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="open" destination="ckH-si-x1R" eventType="touchUpInside" id="Aat-Tp-Ds0"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="8T2-Qg-w49">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8Rd-am-T82">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Rd-am-T82" id="6sh-k5-Dgi">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mx-fj-grd">
-                                                    <rect key="frame" x="8" y="9" width="304" height="30"/>
-                                                    <state key="normal" title="אפס רקע">
-                                                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="reset:" destination="ckH-si-x1R" eventType="touchUpInside" id="Izn-6h-T4E"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="ckH-si-x1R" id="zSS-7a-zrO"/>
-                            <outlet property="delegate" destination="ckH-si-x1R" id="hWC-Hs-eCO"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="fVT-ye-dbc"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fji-cz-kX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1159" y="147"/>
-        </scene>
         <!--אודות-->
         <scene sceneID="0Pe-Wg-g7L">
             <objects>
@@ -205,32 +141,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tradeMark" translatesAutoresizingMaskIntoConstraints="NO" id="7G8-e2-8RD">
-                                <rect key="frame" x="233" y="100" width="77" height="69"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Selfy" translatesAutoresizingMaskIntoConstraints="NO" id="pld-JK-dVo">
-                                <rect key="frame" x="16" y="81" width="154" height="177"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="גרסא: 1.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucb-wE-S8b">
-                                <rect key="frame" x="195" y="177" width="106" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="הודעות שנשלחו: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjH-R8-Oa4">
-                                <rect key="frame" x="193" y="296" width="111" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGr-HZ-beX">
                                 <rect key="frame" x="131" y="296" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQh-U9-cPA">
-                                <rect key="frame" x="131" y="325" width="73" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQh-U9-cPA">
+                                <rect key="frame" x="240" y="398" width="64" height="30"/>
                                 <state key="normal" title="שלח ואפס ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -238,8 +156,59 @@
                                     <action selector="sendAndRest:" destination="tfe-nV-aJh" eventType="touchUpInside" id="lQK-PH-0fu"/>
                                 </connections>
                             </button>
+                            <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5w-pq-AJO">
+                                <rect key="frame" x="0.0" y="64" width="320" height="253"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tradeMark" translatesAutoresizingMaskIntoConstraints="NO" id="7G8-e2-8RD">
+                                        <rect key="frame" x="0.0" y="48" width="320" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="skH-Vv-VMS"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DontWorry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DT4-A9-JIO">
+                                        <rect key="frame" x="113" y="154" width="94" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="גרסא: 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucb-wE-S8b">
+                                        <rect key="frame" x="134" y="183" width="53" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.086274509803921567" green="0.63921568627450975" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="DT4-A9-JIO" firstAttribute="top" secondItem="7G8-e2-8RD" secondAttribute="bottom" constant="8" id="786-3e-5K4"/>
+                                    <constraint firstItem="ucb-wE-S8b" firstAttribute="top" secondItem="DT4-A9-JIO" secondAttribute="bottom" constant="5" id="8F5-3x-oGd"/>
+                                    <constraint firstAttribute="centerY" secondItem="7G8-e2-8RD" secondAttribute="centerY" constant="29.5" id="c8i-fD-Tim"/>
+                                    <constraint firstItem="7G8-e2-8RD" firstAttribute="top" secondItem="W5w-pq-AJO" secondAttribute="top" constant="48" id="dXR-dU-cl2"/>
+                                    <constraint firstAttribute="centerX" secondItem="ucb-wE-S8b" secondAttribute="centerX" id="fh7-tB-ctS"/>
+                                    <constraint firstAttribute="centerX" secondItem="DT4-A9-JIO" secondAttribute="centerX" id="kSZ-0Q-zMx"/>
+                                    <constraint firstAttribute="centerX" secondItem="7G8-e2-8RD" secondAttribute="centerX" id="uBI-Ic-GUj"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="הודעות שנשלחו: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjH-R8-Oa4">
+                                <rect key="frame" x="-23" y="378" width="320" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W5w-pq-AJO" firstAttribute="top" secondItem="WJ9-Vl-1c4" secondAttribute="bottom" id="2b7-q4-dMh"/>
+                            <constraint firstItem="DjH-R8-Oa4" firstAttribute="trailing" secondItem="yQh-U9-cPA" secondAttribute="trailing" constant="-7" id="6AE-ck-U8M"/>
+                            <constraint firstItem="yQh-U9-cPA" firstAttribute="top" secondItem="DjH-R8-Oa4" secondAttribute="bottom" constant="3" id="AHu-OQ-d7M"/>
+                            <constraint firstItem="W5w-pq-AJO" firstAttribute="width" secondItem="Mxf-lm-QH6" secondAttribute="width" id="Sdt-fB-Yeh"/>
+                            <constraint firstAttribute="centerX" secondItem="W5w-pq-AJO" secondAttribute="centerX" id="VtJ-Yc-zYY"/>
+                            <constraint firstItem="yQh-U9-cPA" firstAttribute="trailing" secondItem="Mxf-lm-QH6" secondAttribute="trailingMargin" id="XJt-fZ-4Yn"/>
+                            <constraint firstItem="m6c-la-tHW" firstAttribute="top" secondItem="W5w-pq-AJO" secondAttribute="bottom" constant="119" id="YQ0-eG-X4O"/>
+                            <constraint firstItem="m6c-la-tHW" firstAttribute="top" secondItem="yQh-U9-cPA" secondAttribute="bottom" constant="8" id="Zvo-9H-pAm"/>
+                            <constraint firstItem="DjH-R8-Oa4" firstAttribute="width" secondItem="Mxf-lm-QH6" secondAttribute="width" id="aR5-tM-PgV"/>
+                            <constraint firstItem="W5w-pq-AJO" firstAttribute="leading" secondItem="Mxf-lm-QH6" secondAttribute="leadingMargin" constant="-16" id="rMq-7A-tAX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="אודות" id="4Yb-YY-9k1"/>
                     <connections>
@@ -249,6 +218,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngN-Py-ahQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1159" y="785"/>
+        </scene>
+        <!--הגדרות רקע-->
+        <scene sceneID="qeR-eD-slM">
+            <objects>
+                <viewController id="8rB-17-PwK" customClass="BackgroundViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Pm-D4-HQ4"/>
+                        <viewControllerLayoutGuide type="bottom" id="6pT-ec-JfS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NKY-zr-t0t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbH-9r-MQZ">
+                                <rect key="frame" x="0.0" y="186" width="320" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="jK5-rs-NxV"/>
+                                </constraints>
+                                <state key="normal" title="אפס רקע">
+                                    <color key="titleColor" red="0.96862751250000001" green="0.2823529541" blue="0.070588238540000001" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetBackground:" destination="8rB-17-PwK" eventType="touchUpInside" id="dsf-ao-Rvk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfI-Ja-hO8">
+                                <rect key="frame" x="0.0" y="114" width="320" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="jBu-wR-20u"/>
+                                </constraints>
+                                <state key="normal" title="אלבום תמונות">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openAlbum:" destination="8rB-17-PwK" eventType="touchUpInside" id="EGq-Ys-nzt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BfI-Ja-hO8" firstAttribute="top" secondItem="5Pm-D4-HQ4" secondAttribute="bottom" constant="50" id="AJ7-YI-Ym7"/>
+                            <constraint firstAttribute="width" secondItem="BfI-Ja-hO8" secondAttribute="width" id="BcJ-eV-1it"/>
+                            <constraint firstItem="BfI-Ja-hO8" firstAttribute="leading" secondItem="NKY-zr-t0t" secondAttribute="leadingMargin" constant="-16" id="ML5-v4-7Nj"/>
+                            <constraint firstItem="lbH-9r-MQZ" firstAttribute="width" secondItem="NKY-zr-t0t" secondAttribute="width" id="Qfx-Pi-R4D"/>
+                            <constraint firstItem="lbH-9r-MQZ" firstAttribute="leading" secondItem="NKY-zr-t0t" secondAttribute="leadingMargin" constant="-16" id="lHE-Tz-5D9"/>
+                            <constraint firstItem="lbH-9r-MQZ" firstAttribute="top" secondItem="BfI-Ja-hO8" secondAttribute="bottom" constant="27" id="ykB-1S-Lwf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="הגדרות רקע" id="Njg-7y-fns"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yR-0M-tfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1467" y="192"/>
         </scene>
         <!--אנשי קשר-->
         <scene sceneID="PbU-6B-CzF">
@@ -556,7 +581,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Selfy" width="960" height="1280"/>
         <image name="tabBarBubble" width="32" height="32"/>
         <image name="tabBarContacts" width="32" height="32"/>
         <image name="tabBarEditBubble" width="32" height="32"/>

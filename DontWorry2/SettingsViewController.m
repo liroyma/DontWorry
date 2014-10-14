@@ -7,7 +7,7 @@
 //
 
 #import "SettingsViewController.h"
-#import "BackgroundTableViewController.h"
+#import "BackgroundViewController.h"
 #import <Social/Social.h>
 
 @interface SettingsViewController() <UIActionSheetDelegate>
@@ -30,7 +30,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"background"]) {
-        BackgroundTableViewController *destViewController = segue.destinationViewController;
+        BackgroundViewController *destViewController = segue.destinationViewController;
         destViewController.myMessages = self.myMessages;
     }
 }

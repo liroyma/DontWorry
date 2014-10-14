@@ -1,41 +1,37 @@
 //
-//  BackgroundTableViewController.m
+//  BackgroundViewController.m
 //  DontWorry2
 //
-//  Created by Liroy Machluf on 10/1/14.
+//  Created by Liroy Machluf on 10/14/14.
 //  Copyright (c) 2014 Liroy Machluf. All rights reserved.
 //
 
-#import "BackgroundTableViewController.h"
+#import "BackgroundViewController.h"
 
-@interface BackgroundTableViewController () 
+@interface BackgroundViewController ()
 
 @end
 
-@implementation BackgroundTableViewController
+@implementation BackgroundViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)reset:(id)sender {
+
+- (IBAction)resetBackground:(id)sender {
     if([UIAlertController class])
     {
         UIAlertController * alert=   [UIAlertController
                                       alertControllerWithTitle:@"איפוס תמונת רקע"
                                       message:@"האם אתה בטוח שאתה רוצה לאפס הרקע?"
                                       preferredStyle:UIAlertControllerStyleAlert];
-
+        
         UIAlertAction* ok = [UIAlertAction
                              actionWithTitle:@"אפס"
                              style:UIAlertActionStyleDefault
@@ -53,38 +49,31 @@
                                      [alert dismissViewControllerAnimated:YES completion:nil];
                                      
                                  }];
-
+        
         [alert addAction:ok];
         [alert addAction:cancel];
-
+        
         [self presentViewController:alert animated:YES completion:nil];
     }
     else
     {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"איפוס תמונת רקע"
                                                         message:@"האם אתה בטוח שאתה רוצה לאפס הרקע?"
-                                                        delegate:self
-                                               cancelButtonTitle:@"ביטול"
-                                               otherButtonTitles:@"אפס", nil];
+                                                       delegate:self
+                                              cancelButtonTitle:@"ביטול"
+                                              otherButtonTitles:@"אפס", nil];
         [alert show];
     }
 }
 
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if(buttonIndex==1)
-    {
-        [self.myMessages setImagebackground:nil];
-    }
-}
 
-- (IBAction)open {
+- (IBAction)openAlbum:(id)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
     [self presentViewController:picker animated:YES completion:NULL];
+    
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
