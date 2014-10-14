@@ -7,7 +7,6 @@
 //
 
 #import "Messages.h"
-#import <CoreLocation/CoreLocation.h>
 
 @interface Messages()
 
@@ -18,7 +17,7 @@
 
 
 @implementation Messages{
-    CLLocationManager *locationManager;
+
 }
 
 -(NSMutableArray *)messages
@@ -67,13 +66,14 @@
         self.messageCounter = 0;
         self.defualt = [NSUserDefaults standardUserDefaults];
         [self loadData];
-        locationManager = [[CLLocationManager alloc] init];
-        locationManager.delegate = self;
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-            [locationManager requestWhenInUseAuthorization];
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [self.locationManager requestWhenInUseAuthorization];
+            [self.locationManager requestAlwaysAuthorization];
         }
-        [locationManager startUpdatingLocation];
+        [self.locationManager startUpdatingLocation];
     }
     
     return self;
@@ -149,18 +149,18 @@
 
     if(status)
     {
-        [locationManager startUpdatingLocation];
+        [self.locationManager startUpdatingLocation];
     }
     else
     {
         self.location = nil;
-        [locationManager stopUpdatingLocation];
+        [self.locationManager stopUpdatingLocation];
     }
 }
 
 -(void) StopLocationUpdate
 {
-    [locationManager stopUpdatingLocation];
+    [self.locationManager stopUpdatingLocation];
 }
 
 - (void)loadData
@@ -194,8 +194,7 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
-    CLLocation *currentLocation = newLocation;
-    
+    CLLocation *currentLocation = newLocation;    
     if (currentLocation != nil) {
         double longitude = currentLocation.coordinate.longitude;
         double latitude = currentLocation.coordinate.latitude;

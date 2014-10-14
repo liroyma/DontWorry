@@ -19,6 +19,7 @@
 @property (strong, nonatomic)NSString *locationMessageString;
 @property (strong, nonatomic)NSString *location;
 @property (strong, nonatomic) UIImage *image;
+@property (nonatomic, strong)  CLLocationManager *locationManager;
 
 -(void) loadData;
 
@@ -32,7 +33,7 @@
 
 -(void) RemoveContactWithName:(NSString*)name;
 
--(void)RemoveMessageAtIndex:(NSInteger)index;
+-(void) RemoveMessageAtIndex:(NSInteger)index;
 
 -(void) ChangeLocationButtonStatus:(BOOL)status;
 
