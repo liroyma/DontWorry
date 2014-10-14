@@ -151,6 +151,7 @@
     
     if([tempnumber count] >1)
     {
+        
         /*for (int i = 0; i<[tempnumber count]; i++) {
             if(![self.myMessages.recipientsNumbers containsObject:tempnumber[i]])
             {
@@ -163,20 +164,28 @@
     {
         [self.myMessages AddContactWithName:fullNameString AndNumber:tempnumber[0]];
     }
-    
-    
-    
-   
-    /*else
-    {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Phone already exsist"
-                                                       message: [NSString stringWithFormat:@"You alrady add %@.",fullNameString]
-                                                      delegate: self
-                                             cancelButtonTitle:@"Cancel"
-                                             otherButtonTitles:@"OK",nil];
-        [alert show];
-    }*/
+
     [self.tableView reloadData];
 }
+
+- (void)displayPerson:(ABRecordRef)person
+{
+    /*NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(person,
+                                                                    kABPersonFirstNameProperty);
+    self.firstName.text = name;
+    
+    NSString* phone = nil;
+    ABMultiValueRef phoneNumbers = ABRecordCopyValue(person,
+                                                     kABPersonPhoneProperty);
+    if (ABMultiValueGetCount(phoneNumbers) > 0) {
+        phone = (__bridge_transfer NSString*)
+        ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
+    } else {
+        phone = @"[None]";
+    }
+    self.phoneNumber.text = phone;
+    CFRelease(phoneNumbers);*/
+}
+
 
 @end
