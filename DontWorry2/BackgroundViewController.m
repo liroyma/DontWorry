@@ -78,16 +78,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    CGSize newSize = CGSizeMake(200.0f, 240.0f);
-    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
-    [chosenImage drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    [self.myMessages setImagebackground:chosenImage];
-    
-    
+    [self.myMessages setImagebackground:info[UIImagePickerControllerEditedImage]];
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }

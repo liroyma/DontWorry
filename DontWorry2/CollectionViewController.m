@@ -7,7 +7,6 @@
 //
 
 #import "CollectionViewController.h"
-#import "SettingsViewController.h"
 #import <MessageUI/MessageUI.h>
 #import <QuartzCore/QuartzCore.h>
 #import <AddressBook/AddressBook.h>
@@ -50,10 +49,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"ShowSettings"]) {
-        SettingsViewController *destViewController = segue.destinationViewController;
-        destViewController.myMessages = self.myMessages;
-    }
+    
 }
 
 #pragma mark - UICollectionView Datasource

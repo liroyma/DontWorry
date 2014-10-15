@@ -14,7 +14,7 @@
 @interface SettingsViewController() <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UISwitch *sendLocationSwitch;
-
+@property (strong,nonatomic) Messages *myMessages;
 @property (weak, nonatomic) IBOutlet UIButton *shareBut;
 @end
 
@@ -25,7 +25,6 @@
     [super viewDidLoad];
     self.myMessages = [[Messages alloc]init];
     [self.myMessages loadData];
-    self.shareBut.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     self.sendLocationSwitch.on = self.myMessages.showLocationBtn;
 }
 

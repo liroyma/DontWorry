@@ -11,6 +11,4 @@
 
 @interface EditTableViewController : UITableViewController
 
-@property (nonatomic , strong) Messages *myMessages;
-
 @end

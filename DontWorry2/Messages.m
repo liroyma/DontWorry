@@ -118,9 +118,12 @@
 
 -(void)AddContactWithName:(NSString *)name AndNumber:(NSString*)number;
 {
-    [self.recipientsNames addObject:name];
-    [self.recipientsNumbers addObject:number];
-    [self saveContacts];
+    if(![self.recipientsNumbers containsObject:number])
+    {
+        [self.recipientsNames addObject:name];
+        [self.recipientsNumbers addObject:number];
+        [self saveContacts];
+    }
 
 }
 

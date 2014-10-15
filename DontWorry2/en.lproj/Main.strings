@@ -1,0 +1,75 @@
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "1P4-Ad-Upc"; */
+"1P4-Ad-Upc.text" = "Title";
+
+/* Class = "IBUIButton"; normalTitle = "הוסף"; ObjectID = "1y8-gl-bam"; */
+"1y8-gl-bam.normalTitle" = "הוסף";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "29i-lU-TWo"; */
+"29i-lU-TWo.text" = "Label";
+
+/* Class = "IBUINavigationItem"; title = "אודות"; ObjectID = "4Yb-YY-9k1"; */
+"4Yb-YY-9k1.title" = "אודות";
+
+/* Class = "IBUINavigationItem"; title = "הגדרות"; ObjectID = "AcE-4r-FVn"; */
+"AcE-4r-FVn.title" = "הגדרות";
+
+/* Class = "IBUIButton"; normalTitle = "אלבום תמונות"; ObjectID = "BfI-Ja-hO8"; */
+"BfI-Ja-hO8.normalTitle" = "אלבום תמונות";
+
+/* Class = "IBUILabel"; text = "DontWorry"; ObjectID = "DT4-A9-JIO"; */
+"DT4-A9-JIO.text" = "DontWorry";
+
+/* Class = "IBUINavigationItem"; title = "Title"; ObjectID = "Em4-qv-3xD"; */
+"Em4-qv-3xD.title" = "Title";
+
+/* Class = "IBUILabel"; text = "אודות"; ObjectID = "Gqw-g3-oLh"; */
+"Gqw-g3-oLh.text" = "אודות";
+
+/* Class = "IBUIBarButtonItem"; title = "שמור"; ObjectID = "LZk-9u-S4Q"; */
+"LZk-9u-S4Q.title" = "שמור";
+
+/* Class = "IBUINavigationItem"; title = "הגדרות רקע"; ObjectID = "Njg-7y-fns"; */
+"Njg-7y-fns.title" = "הגדרות רקע";
+
+/* Class = "IBUIButton"; normalTitle = "צור קשר"; ObjectID = "Nlm-Qv-nut"; */
+"Nlm-Qv-nut.normalTitle" = "צור קשר";
+
+/* Class = "IBUIButton"; normalTitle = "אתר תמיכה"; ObjectID = "PVL-Ur-yYT"; */
+"PVL-Ur-yYT.normalTitle" = "אתר תמיכה";
+
+/* Class = "IBUILabel"; text = "הכנס תוכן הודעה"; ObjectID = "QCe-h7-d0L"; */
+"QCe-h7-d0L.text" = "הכנס תוכן הודעה";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "UHu-Nm-QVU"; */
+"UHu-Nm-QVU.text" = "Subtitle";
+
+/* Class = "IBUILabel"; text = "אפשר שליחת מיקום"; ObjectID = "avT-Dg-ZAV"; */
+"avT-Dg-ZAV.text" = "אפשר שליחת מיקום";
+
+/* Class = "IBUIButton"; normalTitle = "שתף"; ObjectID = "irz-PB-Uix"; */
+"irz-PB-Uix.normalTitle" = "שתף";
+
+/* Class = "IBUILabel"; text = "עיצוב תמונת רקע"; ObjectID = "jZL-Ti-Te5"; */
+"jZL-Ti-Te5.text" = "עיצוב תמונת רקע";
+
+/* Class = "IBUIButton"; normalTitle = "אפס רקע"; ObjectID = "lbH-9r-MQZ"; */
+"lbH-9r-MQZ.normalTitle" = "אפס רקע";
+
+/* Class = "IBUINavigationItem"; title = "רשימת כפתורים"; ObjectID = "nFn-pP-t5n"; */
+"nFn-pP-t5n.title" = "רשימת כפתורים";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "nn6-t6-dXt"; */
+"nn6-t6-dXt.text" = "Label";
+
+/* Class = "IBUILabel"; text = "גרסא: 1.0"; ObjectID = "ucb-wE-S8b"; */
+"ucb-wE-S8b.text" = "גרסא: 1.0";
+
+/* Class = "IBUIBarButtonItem"; title = " שמור"; ObjectID = "vva-ev-14P"; */
+"vva-ev-14P.title" = " שמור";
+
+/* Class = "IBUINavigationItem"; title = "אנשי קשר"; ObjectID = "y0A-ce-kMb"; */
+"y0A-ce-kMb.title" = "אנשי קשר";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "zVg-3B-w4B"; */
+"zVg-3B-w4B.text" = "Title";

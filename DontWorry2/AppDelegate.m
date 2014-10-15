@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-    tabBarController.selectedIndex = 0;
+    
     UIViewController *tab1 = [[tabBarController viewControllers] objectAtIndex:0];
     [[tab1 tabBarItem] setTitle:@"ראשי"];
     [[tab1 tabBarItem] setImage:[UIImage imageNamed:@"tabBarBubble"]];
@@ -37,6 +37,8 @@
     [[tab4 tabBarItem] setTitle:@"הגדרות"];
     [[tab4 tabBarItem] setImage:[UIImage imageNamed:@"tabBarSettings"]];
     [[tab4 tabBarItem] setSelectedImage:[UIImage imageNamed:@"tabBarSettings"]];
+    
+    tabBarController.selectedIndex = 0;
     
     return YES;
 }

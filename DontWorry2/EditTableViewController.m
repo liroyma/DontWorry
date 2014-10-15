@@ -9,10 +9,12 @@
 #import "EditTableViewController.h"
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
+#import "PersonTableViewController.h"
 
 @interface EditTableViewController () <ABPeoplePickerNavigationControllerDelegate>
 
 @property (nonatomic, strong) ABPeoplePickerNavigationController *addressBookController;
+@property (nonatomic , strong) Messages *myMessages;
 
 @end
 
@@ -32,6 +34,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [self.myMessages loadData];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -151,7 +154,11 @@
     
     if([tempnumber count] >1)
     {
+        PersonTableViewController *vc = [[PersonTableViewController alloc]init];
+        vc.PersonName = fullNameString;
+        vc.PersonNumbers = tempnumber;
         
+        [self.navigationController pushViewController:vc animated:YES];
         /*for (int i = 0; i<[tempnumber count]; i++) {
             if(![self.myMessages.recipientsNumbers containsObject:tempnumber[i]])
             {
@@ -168,24 +175,6 @@
     [self.tableView reloadData];
 }
 
-- (void)displayPerson:(ABRecordRef)person
-{
-    /*NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(person,
-                                                                    kABPersonFirstNameProperty);
-    self.firstName.text = name;
-    
-    NSString* phone = nil;
-    ABMultiValueRef phoneNumbers = ABRecordCopyValue(person,
-                                                     kABPersonPhoneProperty);
-    if (ABMultiValueGetCount(phoneNumbers) > 0) {
-        phone = (__bridge_transfer NSString*)
-        ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
-    } else {
-        phone = @"[None]";
-    }
-    self.phoneNumber.text = phone;
-    CFRelease(phoneNumbers);*/
-}
 
 
 @end

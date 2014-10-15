@@ -11,7 +11,6 @@
 
 @interface SettingsViewController : UITableViewController
 
-@property (strong,nonatomic) Messages *myMessages;
 
 
 @end
