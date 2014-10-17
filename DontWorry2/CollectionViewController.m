@@ -31,17 +31,16 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [self.myMessages loadData];
+    [self.collectionView reloadData];
+    self.names.text = [self.myMessages.recipientsNames componentsJoinedByString:@", "];
     if(self.myMessages.image)
     {
-        //self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[self.myMessages ResizeImageToSize:self.collectionView.bounds.size]];
-        self.collectionView.backgroundColor = [UIColor colorWithPatternImage:[self.myMessages ResizeImageToSize:self.view.bounds.size]];
+        self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[self.myMessages ResizeImageToSize:self.collectionView.bounds.size]];
     }
     else
     {
         self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[self.myMessages SetEmptyImage]];
     }
-    self.names.text = [self.myMessages.recipientsNames componentsJoinedByString:@", "];
-    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

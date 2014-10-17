@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GEg-6h-bhm">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--הגדרות-->
@@ -257,9 +255,11 @@
                         <constraints>
                             <constraint firstItem="BfI-Ja-hO8" firstAttribute="top" secondItem="5Pm-D4-HQ4" secondAttribute="bottom" constant="50" id="AJ7-YI-Ym7"/>
                             <constraint firstAttribute="width" secondItem="BfI-Ja-hO8" secondAttribute="width" id="BcJ-eV-1it"/>
-                            <constraint firstItem="BfI-Ja-hO8" firstAttribute="leading" secondItem="NKY-zr-t0t" secondAttribute="leadingMargin" constant="-16" id="ML5-v4-7Nj"/>
+                            <constraint firstItem="lbH-9r-MQZ" firstAttribute="width" secondItem="NKY-zr-t0t" secondAttribute="width" id="GG3-de-yWg"/>
+                            <constraint firstAttribute="centerX" secondItem="lbH-9r-MQZ" secondAttribute="centerX" id="Lmw-tn-l6B"/>
                             <constraint firstItem="lbH-9r-MQZ" firstAttribute="width" secondItem="NKY-zr-t0t" secondAttribute="width" id="Qfx-Pi-R4D"/>
-                            <constraint firstItem="lbH-9r-MQZ" firstAttribute="leading" secondItem="NKY-zr-t0t" secondAttribute="leadingMargin" constant="-16" id="lHE-Tz-5D9"/>
+                            <constraint firstItem="BfI-Ja-hO8" firstAttribute="width" secondItem="NKY-zr-t0t" secondAttribute="width" id="Vi7-tQ-MIO"/>
+                            <constraint firstAttribute="centerX" secondItem="BfI-Ja-hO8" secondAttribute="centerX" id="mNn-Bx-2Fz"/>
                             <constraint firstItem="lbH-9r-MQZ" firstAttribute="top" secondItem="BfI-Ja-hO8" secondAttribute="bottom" constant="27" id="ykB-1S-Lwf"/>
                         </constraints>
                     </view>
