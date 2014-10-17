@@ -32,7 +32,19 @@
 {
     [self.myMessages loadData];
     [self.collectionView reloadData];
-    self.names.text = [self.myMessages.recipientsNames componentsJoinedByString:@", "];
+    if([self.myMessages.recipientsNumbers count] > 0)
+    {
+        self.names.text = [self.myMessages.recipientsNames componentsJoinedByString:@", "];
+        self.names.textColor = [UIColor blackColor];
+    }
+    else
+    {
+        self.names.text = @"נא לבחור אנשי קשר";
+        self.names.textColor = [UIColor colorWithRed:105.0f/255 green:202.0f/255 blue:249.0f/255 alpha:1];
+    }
+        
+    
+
     if(self.myMessages.image)
     {
         self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[self.myMessages ResizeImageToSize:self.collectionView.bounds.size]];
