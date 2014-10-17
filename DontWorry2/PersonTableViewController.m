@@ -60,15 +60,18 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  //  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
     UITableViewCell *cell = [[UITableViewCell alloc]init];
+    cell.textLabel.font = [UIFont fontWithName: @"Arial" size: 30.0 ];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
     cell.textLabel.text = self.PersonNumbers[indexPath.row];
     
-    // Configure the cell...
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
 }
 
 /*

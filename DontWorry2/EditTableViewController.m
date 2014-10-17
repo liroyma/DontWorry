@@ -94,8 +94,9 @@
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person {
     
     [self SeletPerson:person];
+    [peoplePicker dismissViewControllerAnimated:YES completion:nil];
     
-    return YES;
+    return NO;
     
 }
 
@@ -103,7 +104,7 @@
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker
       shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property
                               identifier:(ABMultiValueIdentifier)identifier {
-    return YES;
+    return NO;
 }
 
 //IOS 8 method
@@ -159,13 +160,7 @@
         vc.PersonNumbers = tempnumber;
         
         [self.navigationController pushViewController:vc animated:YES];
-        /*for (int i = 0; i<[tempnumber count]; i++) {
-            if(![self.myMessages.recipientsNumbers containsObject:tempnumber[i]])
-            {
-                NSString *number = tempnumber[i];
-                
-            }
-        }*/
+
     }
     else
     {

@@ -54,19 +54,21 @@
     NSString *title = [actionSheet buttonTitleAtIndex:buttonIndex];
     if([title isEqualToString:@"Mail"])
     {
-        NSLog(@"Send Mail");
-        // Email Subject
-        NSString *emailTitle = @"Recommended App";
-        // Email Content
-        NSString *messageBody = @"<h1>I'm using DontWorry Application and it's great! :)</h1> <p>you should try it.</p>";
-        
-        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-        mc.mailComposeDelegate = self;
-        [mc setSubject:emailTitle];
-        [mc setMessageBody:messageBody isHTML:YES];
-        
-        // Present mail view controller on screen
-        [self presentViewController:mc animated:YES completion:NULL];
+        if ([MFMailComposeViewController canSendMail]) {
+            NSLog(@"Send Mail");
+            NSString *emailTitle = @"Recommended App";
+            NSString *messageBody = @"<h1>I'm using DontWorry Application and it's great! :)</h1> <p>you should try it.</p>";
+            
+            MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+            mc.mailComposeDelegate = self;
+            [mc setSubject:emailTitle];
+            [mc setMessageBody:messageBody isHTML:YES];
+            
+            [self presentViewController:mc animated:YES completion:NULL];
+        }
+        else{
+            
+        }
     }
     else if([title isEqualToString:@"FaceBook"])
     {
@@ -112,8 +114,6 @@
         default:
             break;
     }
-    
-    // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 

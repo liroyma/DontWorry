@@ -33,7 +33,8 @@
     [self.myMessages loadData];
     if(self.myMessages.image)
     {
-        self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[self.myMessages ResizeImageToSize:self.collectionView.bounds.size]];
+        //self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[self.myMessages ResizeImageToSize:self.collectionView.bounds.size]];
+        self.collectionView.backgroundColor = [UIColor colorWithPatternImage:[self.myMessages ResizeImageToSize:self.view.bounds.size]];
     }
     else
     {

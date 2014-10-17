@@ -14,12 +14,14 @@
 @interface AboutViewController () <MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *countlbl;
 @property (strong, nonatomic) Messages *myMessegase;
+@property (weak, nonatomic) IBOutlet UIView *tradeBackground;
 @end
 
 @implementation AboutViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tradeBackground.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"backgroumd"]];
     self.myMessegase = [[Messages alloc]init];   // Do any additional setup after loading the view.
 }
 
@@ -41,20 +43,18 @@
 }
 
 - (IBAction)ShowMail:(id)sender {
-    NSString *emailTitle = @"DontWorry Support";
-    // Email Content
-    NSString *messageBody = @"";
-    // To address
-    NSArray *toRecipents = [NSArray arrayWithObject:@"liroyma@gmail.com"];
+    if ([MFMailComposeViewController canSendMail]) {
+        NSString *emailTitle = @"DontWorry Support";
+        NSString *messageBody = @"";
+        NSArray *toRecipents = [NSArray arrayWithObject:@"liroyma@gmail.com"];
     
-    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-    mc.mailComposeDelegate = self;
-    [mc setSubject:emailTitle];
-    [mc setMessageBody:messageBody isHTML:NO];
-    [mc setToRecipients:toRecipents];
-    
-    // Present mail view controller on screen
-    [self presentViewController:mc animated:YES completion:NULL];
+        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+        mc.mailComposeDelegate = self;
+        [mc setSubject:emailTitle];
+        [mc setMessageBody:messageBody isHTML:NO];
+        [mc setToRecipients:toRecipents];
+        [self presentViewController:mc animated:YES completion:NULL];
+    }
 }
 
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error

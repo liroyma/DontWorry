@@ -66,6 +66,17 @@
     }
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    
+    if([title isEqualToString:@"אפס"])
+    {
+        [self.myMessages setImagebackground:nil];
+    }
+    
+}
+
 
 - (IBAction)openAlbum:(id)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
