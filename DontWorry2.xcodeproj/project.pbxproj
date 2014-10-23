@@ -22,6 +22,8 @@
 		747F675919BB94A100E9728B /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 747F675819BB94A100E9728B /* CollectionViewController.m */; };
 		74A6521819ED26C200E5C959 /* BackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A6521719ED26C200E5C959 /* BackgroundViewController.m */; };
 		74A6521A19ED334100E5C959 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A6521919ED334100E5C959 /* MessageUI.framework */; };
+		74CBA56E19F1A13800976261 /* BubblelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CBA56D19F1A13800976261 /* BubblelsViewController.m */; };
+		74CBA57119F1AB8C00976261 /* STBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CBA57019F1AB8C00976261 /* STBubbleTableViewCell.m */; };
 		74D2B23219B20DF3008C9F93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D2B23119B20DF3008C9F93 /* main.m */; };
 		74D2B23519B20DF3008C9F93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D2B23419B20DF3008C9F93 /* AppDelegate.m */; };
 		74D2B23B19B20DF3008C9F93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D2B23919B20DF3008C9F93 /* Main.storyboard */; };
@@ -64,6 +66,10 @@
 		74A6521619ED26C200E5C959 /* BackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundViewController.h; sourceTree = "<group>"; };
 		74A6521719ED26C200E5C959 /* BackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundViewController.m; sourceTree = "<group>"; };
 		74A6521919ED334100E5C959 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		74CBA56C19F1A13800976261 /* BubblelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubblelsViewController.h; sourceTree = "<group>"; };
+		74CBA56D19F1A13800976261 /* BubblelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubblelsViewController.m; sourceTree = "<group>"; };
+		74CBA56F19F1AB8C00976261 /* STBubbleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STBubbleTableViewCell.h; sourceTree = "<group>"; };
+		74CBA57019F1AB8C00976261 /* STBubbleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STBubbleTableViewCell.m; sourceTree = "<group>"; };
 		74D2B22C19B20DF3008C9F93 /* DontWorry2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DontWorry2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D2B23019B20DF3008C9F93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74D2B23119B20DF3008C9F93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,6 +109,8 @@
 		744F143919B217C5002F79AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				74CBA56F19F1AB8C00976261 /* STBubbleTableViewCell.h */,
+				74CBA57019F1AB8C00976261 /* STBubbleTableViewCell.m */,
 				744F143019B213D5002F79AC /* Messages.h */,
 				744F143119B213D5002F79AC /* Messages.m */,
 			);
@@ -147,6 +155,8 @@
 				744F143919B217C5002F79AC /* Model */,
 				74D2B23C19B20DF3008C9F93 /* Images.xcassets */,
 				74D2B23919B20DF3008C9F93 /* Main.storyboard */,
+				74CBA56C19F1A13800976261 /* BubblelsViewController.h */,
+				74CBA56D19F1A13800976261 /* BubblelsViewController.m */,
 				744E371019EEEC000074232A /* PersonTableViewController.h */,
 				744E371119EEEC000074232A /* PersonTableViewController.m */,
 				74A6521619ED26C200E5C959 /* BackgroundViewController.h */,
@@ -297,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				744F143219B213D5002F79AC /* Messages.m in Sources */,
+				74CBA56E19F1A13800976261 /* BubblelsViewController.m in Sources */,
 				74D2B23519B20DF3008C9F93 /* AppDelegate.m in Sources */,
 				74A6521819ED26C200E5C959 /* BackgroundViewController.m in Sources */,
 				744E371319EEEC000074232A /* PersonTableViewController.m in Sources */,
@@ -305,6 +316,7 @@
 				747F674719B8DC4A00E9728B /* AddMessageViewController.m in Sources */,
 				747F674419B8CDE100E9728B /* ButtonsTableViewController.m in Sources */,
 				744EDE2719DDCA4B00C6F005 /* AboutViewController.m in Sources */,
+				74CBA57119F1AB8C00976261 /* STBubbleTableViewCell.m in Sources */,
 				747F675919BB94A100E9728B /* CollectionViewController.m in Sources */,
 				74041E0319E1C44B00DD06A5 /* EditTableViewController.m in Sources */,
 			);

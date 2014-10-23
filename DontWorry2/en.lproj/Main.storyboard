@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GEg-6h-bhm">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -451,6 +450,64 @@
             </objects>
             <point key="canvasLocation" x="774" y="-1584"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="Hkb-aG-YSJ">
+            <objects>
+                <viewController id="21o-xL-fqE" customClass="BubblelsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GQ9-mY-6Kd"/>
+                        <viewControllerLayoutGuide type="bottom" id="d1a-K8-Fez"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fl7-gn-aPF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba9-Ez-3q7">
+                                <rect key="frame" x="144" y="28" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hsg-XD-FEl">
+                                <rect key="frame" x="0.0" y="57" width="320" height="374"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bubbleCell" id="OvL-Vx-Va9">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OvL-Vx-Va9" id="hcf-zr-oUY">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="21o-xL-fqE" id="riq-Pg-oPz"/>
+                                    <outlet property="delegate" destination="21o-xL-fqE" id="8D8-aZ-40f"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Ba9-Ez-3q7" secondAttribute="centerY" constant="201.5" id="6hD-2f-if5"/>
+                            <constraint firstItem="d1a-K8-Fez" firstAttribute="top" secondItem="Hsg-XD-FEl" secondAttribute="bottom" id="CRf-su-sF4"/>
+                            <constraint firstItem="Ba9-Ez-3q7" firstAttribute="centerX" secondItem="Hsg-XD-FEl" secondAttribute="centerX" constant="5" id="QjJ-qE-d1F"/>
+                            <constraint firstItem="Ba9-Ez-3q7" firstAttribute="top" secondItem="GQ9-mY-6Kd" secondAttribute="bottom" constant="8" id="TVf-fw-d2A"/>
+                            <constraint firstAttribute="centerX" secondItem="Hsg-XD-FEl" secondAttribute="centerX" id="c9Y-PO-lGJ"/>
+                            <constraint firstItem="Hsg-XD-FEl" firstAttribute="top" secondItem="Ba9-Ez-3q7" secondAttribute="bottom" constant="8" id="qOz-a3-Q8Y"/>
+                            <constraint firstAttribute="width" secondItem="Hsg-XD-FEl" secondAttribute="width" id="xr4-kL-k6n"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Ly6-Wq-h4c"/>
+                    <navigationItem key="navigationItem" id="ieK-J7-18M"/>
+                    <connections>
+                        <outlet property="receptians" destination="Ba9-Ez-3q7" id="dp8-MR-Q44"/>
+                        <outlet property="table" destination="Hsg-XD-FEl" id="SQU-UZ-VLs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcr-Oz-pVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="723" y="-1001"/>
+        </scene>
         <!--Add Message View Controller-->
         <scene sceneID="rZx-Sb-8a8">
             <objects>
@@ -512,6 +569,7 @@
                         <segue destination="OYr-us-HIP" kind="relationship" relationship="viewControllers" id="3Oy-q0-yPj"/>
                         <segue destination="FBO-yW-hBe" kind="relationship" relationship="viewControllers" id="yAD-e7-dHG"/>
                         <segue destination="aJA-YK-71R" kind="relationship" relationship="viewControllers" id="Aic-f9-N0l"/>
+                        <segue destination="21o-xL-fqE" kind="relationship" relationship="viewControllers" id="zlg-gc-H9A"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWk-2R-3Zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
