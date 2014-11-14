@@ -57,7 +57,7 @@
         if ([MFMailComposeViewController canSendMail]) {
             NSLog(@"Send Mail");
             NSString *emailTitle = @"Recommended App";
-            NSString *messageBody = @"<h1>I'm using DontWorry Application and it's great! :)</h1> <p>you should try it.</p>";
+            NSString *messageBody = @"<h1>I'm using DontWorry Application and it's great! :)</h1> <p>you should try it.</p><br><a href=\"https://itunes.apple.com/us/app/dontworry/id925506946?mt=8&uo=4\" target=\"itunes_store\">DontWorry - Liroy Machluf</a>";
             
             MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
             mc.mailComposeDelegate = self;
@@ -77,7 +77,7 @@
             SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
             
             [controller setInitialText:@"I'm using DontWorry Application and it's great! :)"];
-            //[controller addURL:[NSURL URLWithString:@"http://www.appcoda.com"]];
+            [controller addURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/dontworry/id925506946?mt=8&uo=4"]];
             [controller addImage:[UIImage imageNamed:@"tradeMark"]];
             [self presentViewController:controller animated:YES completion:Nil];
         }
@@ -90,6 +90,7 @@
             SLComposeViewController *tweetSheet = [SLComposeViewController
                                                    composeViewControllerForServiceType:SLServiceTypeTwitter];
             [tweetSheet setInitialText:@"I'm using DontWorry Application and it's great! :)"];
+            [tweetSheet addURL: [NSURL URLWithString:@"https://itunes.apple.com/us/app/dontworry/id925506946?mt=8&uo=4"]];
             [self presentViewController:tweetSheet animated:YES completion:nil];
         }
     }
