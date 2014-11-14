@@ -28,12 +28,12 @@
     if([UIAlertController class])
     {
         UIAlertController * alert=   [UIAlertController
-                                      alertControllerWithTitle:@"איפוס תמונת רקע"
-                                      message:@"האם ברצונך לאפס הגדרות רקע?"
+                                      alertControllerWithTitle:NSLocalizedString(@"Reset Wallpaper", comment: "The Close button title")
+                                      message:NSLocalizedString(@"Are you sure? ", comment: "The Close button title")
                                       preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction
-                             actionWithTitle:@"אפס"
+                             actionWithTitle:NSLocalizedString(@"Reset", comment: "The Close button title")
                              style:UIAlertActionStyleDefault
                              handler:^(UIAlertAction * action)
                              {
@@ -42,7 +42,7 @@
                                  
                              }];
         UIAlertAction* cancel = [UIAlertAction
-                                 actionWithTitle:@"ביטול"
+                                 actionWithTitle:NSLocalizedString(@"Cancel", comment: "The Close button title")
                                  style:UIAlertActionStyleDefault
                                  handler:^(UIAlertAction * action)
                                  {
@@ -57,11 +57,11 @@
     }
     else
     {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"איפוס תמונת רקע"
-                                                       message:@"האם ברצונך לאפס הגדרות רקע?"
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Reset Wallpaper", comment: "The Close button title")
+                                                        message:NSLocalizedString(@"Are you sure? ", comment: "The Close button title")
                                                        delegate:self
-                                              cancelButtonTitle:@"ביטול"
-                                              otherButtonTitles:@"אפס", nil];
+                                              cancelButtonTitle:NSLocalizedString(@"Cancel", comment: "The Close button title")
+                                              otherButtonTitles:NSLocalizedString(@"Reset", comment: "The Close button title"), nil];
         [alert show];
     }
 }
@@ -70,7 +70,7 @@
 {
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
     
-    if([title isEqualToString:@"אפס"])
+    if([title isEqualToString:NSLocalizedString(@"Reset", comment: "The Close button title")])
     {
         [self.myMessages setImagebackground:nil];
     }

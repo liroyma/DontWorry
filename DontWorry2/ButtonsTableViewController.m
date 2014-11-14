@@ -59,7 +59,12 @@
         NSIndexPath *swipedIndexPath = [self.tableView indexPathForRowAtPoint:swipeLocation];
         self.index = swipedIndexPath.row;
         UITableViewCell* swipedCell = [self.tableView cellForRowAtIndexPath:swipedIndexPath];
-        UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:@"עריכת הודעה" message:@"ערוך את ההודעה" delegate:self cancelButtonTitle:@"ביטול" otherButtonTitles: @"שמור",nil];
+        UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:NSLocalizedString(@"Message Edit", comment: "The Close button title")
+                                                         message:NSLocalizedString(@"Edit the message", comment: "The Close button title")
+                                                        delegate:self
+                                               cancelButtonTitle:NSLocalizedString(@"Cancel", comment: "The Close button title")
+                                               otherButtonTitles: NSLocalizedString(@"Save", comment: "The Close button title"),nil];
+        
         alert.alertViewStyle = UIAlertViewStylePlainTextInput;
         UITextField *nessgaeText = [alert textFieldAtIndex:0];
         nessgaeText.text = swipedCell.textLabel.text;

@@ -25,7 +25,8 @@
     [self.myMessages loadData];
     
     self.title = self.PersonName;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"שמור" style:UIBarButtonItemStyleBordered target:self action:@selector(addArticle)];    
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"Save", comment: "The Close button title") style:UIBarButtonItemStyleBordered target:self action:@selector(addArticle)];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

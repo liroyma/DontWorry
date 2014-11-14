@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  DontWorry2
+
+  Created by Liroy Machluf on 11/14/14.
+  Copyright (c) 2014 Liroy Machluf. All rights reserved.
+*/
+
+// Tab Bar Manu
+Main = "Main";
+Contacts = "Contacts";
+"Messages edit" = "Messages edit";
+Settings = "Settings";
+
+//ButtonsTableViewController (alert)
+"Message Edit" = "Message Edit";
+"Edit the message" ="Edit the message";
+Cancel = "Cancel";
+Save = "Save";
+
+//collectionViewController (empty message)
+"Please select contact" = "Please select contact";
+"My location is:" = "My location is:";
+
+//BackgroundViewController (alert)
+"Reset Wallpaper" = "Reset wallpaper";
+"Are you sure you want to Teset the wallpaper?" = "האם ברצונך אפס הגדרות רקע";
+Reset = "Reset";
+
+//Messages
+"Send my location" = "Send my location";
+first = "I'm at school";
+second = "I'm at home";
+thered = "On my way home";

@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
+        <!--הגדרות-->
         <scene sceneID="tqH-ym-iut">
             <objects>
                 <tableViewController id="4AQ-SA-wt8" customClass="SettingsViewController" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gqw-g3-oLh">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="אודות" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gqw-g3-oLh">
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -46,7 +46,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irz-PB-Uix">
                                                     <rect key="frame" x="16" y="1" width="304" height="43"/>
                                                     <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="18"/>
-                                                    <state key="normal" title="Share">
+                                                    <state key="normal" title="שתף">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -67,7 +67,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Wallpaper Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jZL-Ti-Te5">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="עיצוב תמונת רקע" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jZL-Ti-Te5">
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -97,7 +97,7 @@
                                                         <action selector="switchToggle:" destination="4AQ-SA-wt8" eventType="valueChanged" id="tZc-pq-uXR"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avT-Dg-ZAV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="אפשר שליחת מיקום" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avT-Dg-ZAV">
                                                     <rect key="frame" x="8" y="12" width="212" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -115,7 +115,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Settings" id="AcE-4r-FVn">
+                    <navigationItem key="navigationItem" title="הגדרות" id="AcE-4r-FVn">
                         <barButtonItem key="backBarButtonItem" title="חזור" id="LZk-9u-S4Q"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -128,7 +128,7 @@
             </objects>
             <point key="canvasLocation" x="774" y="153"/>
         </scene>
-        <!--About-->
+        <!--אודות-->
         <scene sceneID="0Pe-Wg-g7L">
             <objects>
                 <viewController id="tfe-nV-aJh" customClass="AboutViewController" sceneMemberID="viewController">
@@ -154,7 +154,7 @@
                                 <rect key="frame" x="0.0" y="384" width="320" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Contact Us">
+                                <state key="normal" title="צור קשר">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -165,7 +165,7 @@
                                 <rect key="frame" x="0.0" y="341" width="320" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Support Site">
+                                <state key="normal" title="אתר תמיכה">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -178,8 +178,8 @@
                                 <color key="textColor" red="0.098039215686274508" green="0.5607843137254902" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucb-wE-S8b">
-                                <rect key="frame" x="125" y="279" width="71" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="גרסא: 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucb-wE-S8b">
+                                <rect key="frame" x="134" y="279" width="53" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.8784313725490196" green="0.58039215686274515" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -194,7 +194,7 @@
                             <constraint firstItem="AiK-lz-lUM" firstAttribute="centerX" secondItem="IsE-L4-d39" secondAttribute="centerX" id="KcG-Qe-Es6"/>
                             <constraint firstAttribute="centerX" secondItem="AiK-lz-lUM" secondAttribute="centerX" id="Mq6-Xo-rTp"/>
                             <constraint firstItem="Nlm-Qv-nut" firstAttribute="top" secondItem="PVL-Ur-yYT" secondAttribute="bottom" constant="8" id="OxG-Rl-WNk"/>
-                            <constraint firstItem="DT4-A9-JIO" firstAttribute="centerX" secondItem="ucb-wE-S8b" secondAttribute="centerX" id="S61-cy-QXj"/>
+                            <constraint firstItem="DT4-A9-JIO" firstAttribute="centerX" secondItem="ucb-wE-S8b" secondAttribute="centerX" constant="-0.5" id="S61-cy-QXj"/>
                             <constraint firstItem="m6c-la-tHW" firstAttribute="top" secondItem="AiK-lz-lUM" secondAttribute="bottom" constant="126" id="StS-P4-y0q"/>
                             <constraint firstItem="AiK-lz-lUM" firstAttribute="width" secondItem="Mxf-lm-QH6" secondAttribute="width" id="T2h-wW-beg"/>
                             <constraint firstItem="Nlm-Qv-nut" firstAttribute="centerX" secondItem="PVL-Ur-yYT" secondAttribute="centerX" id="aJg-ly-kHl"/>
@@ -206,13 +206,13 @@
                             <constraint firstItem="m6c-la-tHW" firstAttribute="top" secondItem="Nlm-Qv-nut" secondAttribute="bottom" constant="17" id="yJK-hv-2y9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="About" id="4Yb-YY-9k1"/>
+                    <navigationItem key="navigationItem" title="אודות" id="4Yb-YY-9k1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngN-Py-ahQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1159" y="785"/>
         </scene>
-        <!--Wallpaper settings-->
+        <!--הגדרות רקע-->
         <scene sceneID="qeR-eD-slM">
             <objects>
                 <viewController id="8rB-17-PwK" customClass="BackgroundViewController" sceneMemberID="viewController">
@@ -230,7 +230,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="jK5-rs-NxV"/>
                                 </constraints>
-                                <state key="normal" title="Rest Wallpaper">
+                                <state key="normal" title="אפס רקע">
                                     <color key="titleColor" red="0.96862751250000001" green="0.2823529541" blue="0.070588238540000001" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -244,7 +244,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="jBu-wR-20u"/>
                                 </constraints>
-                                <state key="normal" title="Photo Album">
+                                <state key="normal" title="אלבום תמונות">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -264,13 +264,13 @@
                             <constraint firstItem="lbH-9r-MQZ" firstAttribute="top" secondItem="BfI-Ja-hO8" secondAttribute="bottom" constant="27" id="ykB-1S-Lwf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Wallpaper settings" id="Njg-7y-fns"/>
+                    <navigationItem key="navigationItem" title="הגדרות רקע" id="Njg-7y-fns"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yR-0M-tfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1467" y="192"/>
         </scene>
-        <!--Contacts-->
+        <!--אנשי קשר-->
         <scene sceneID="PbU-6B-CzF">
             <objects>
                 <tableViewController id="eht-n7-KU6" customClass="EditTableViewController" sceneMemberID="viewController">
@@ -305,7 +305,7 @@
                             <outlet property="delegate" destination="eht-n7-KU6" id="O1x-uE-Q2V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contacts" id="y0A-ce-kMb">
+                    <navigationItem key="navigationItem" title="אנשי קשר" id="y0A-ce-kMb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vQr-QH-ZIP">
                             <connections>
                                 <action selector="OpenContacts" destination="eht-n7-KU6" id="NXu-Ii-K11"/>
@@ -397,7 +397,7 @@
             </objects>
             <point key="canvasLocation" x="242" y="-997"/>
         </scene>
-        <!--Buttons list-->
+        <!--רשימת כפתורים-->
         <scene sceneID="glC-YJ-PtP">
             <objects>
                 <tableViewController id="FlD-nN-ii3" customClass="ButtonsTableViewController" sceneMemberID="viewController">
@@ -431,7 +431,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Buttons list" id="nFn-pP-t5n">
+                    <navigationItem key="navigationItem" title="רשימת כפתורים" id="nFn-pP-t5n">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ip3-V7-SH5">
                             <connections>
                                 <segue destination="jR6-it-qmN" kind="modal" identifier="addMessage" modalTransitionStyle="flipHorizontal" id="Pzx-jA-lod"/>
@@ -464,9 +464,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1y8-gl-bam">
-                                <rect key="frame" x="137" y="168" width="46" height="35"/>
+                                <rect key="frame" x="137" y="168" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Add">
+                                <state key="normal" title="הוסף">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -478,8 +478,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter new Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCe-h7-d0L">
-                                <rect key="frame" x="84" y="87" width="152" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="הכנס תוכן הודעה" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCe-h7-d0L">
+                                <rect key="frame" x="104" y="89" width="113" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>

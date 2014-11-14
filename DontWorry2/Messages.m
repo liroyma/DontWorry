@@ -62,7 +62,7 @@
     
     if(self)
     {
-        self.locationMessageString = @"שלח מיקום";
+        self.locationMessageString = NSLocalizedString(@"Send my location", comment: "The Close button title");
         self.messageCounter = 0;
         self.defualt = [NSUserDefaults standardUserDefaults];
         [self loadData];
@@ -194,7 +194,10 @@
     self.messages = [[self.defualt valueForKey:@"messages"] mutableCopy];
     if([self.messages count]==0)
     {
-        self.messages = [NSMutableArray arrayWithObjects:@"הגעתי לבית הספר", @"הגעתי הביתה",@"יצאתי מהעבודה", nil];
+        NSString *first = NSLocalizedString(@"first", comment: "The Close button title");
+        NSString *second = NSLocalizedString(@"second", comment: "The Close button title");
+        NSString *thered = NSLocalizedString(@"thered", comment: "The Close button title");
+        self.messages = [NSMutableArray arrayWithObjects:first, second, thered, nil];
         [self.defualt setObject:self.messages forKey:@"messages"];
         [self.defualt synchronize];
     }

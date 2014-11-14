@@ -39,7 +39,7 @@
     }
     else
     {
-        self.names.text = @"נא לבחור אנשי קשר";
+        self.names.text = NSLocalizedString(@"Please select contact", comment: "The Close button title");
         self.names.textColor = [UIColor colorWithRed:105.0f/255 green:202.0f/255 blue:249.0f/255 alpha:1];
     }
         
@@ -108,7 +108,8 @@
         {
             if(self.myMessages.location)
             {
-                str = [NSString stringWithFormat:@"המיקום שלי הוא:\n\n%@",self.myMessages.location];
+                NSString *locmessage = NSLocalizedString(@"My location is:", comment: "The Close button title");
+                str = [NSString stringWithFormat:@"%@\n\n%@",locmessage , self.myMessages.location];
             }
         }
         else{
